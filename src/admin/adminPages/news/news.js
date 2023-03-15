@@ -19,7 +19,9 @@ const News = () => {
   return (
     <>
       <div className="wrapperNewsAdmin">
-        <Menu />
+        <div className="menu">
+          <Menu />
+        </div>
         <div className="wrapperNews">
           <div className="serach_wrap">
             <div className="serach_container">

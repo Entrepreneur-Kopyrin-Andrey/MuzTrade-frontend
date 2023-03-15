@@ -1,9 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { fetchAuth } from "../redux/slices/auth";
+import { fetchAuth, selectIsAuth } from "../redux/slices/auth";
 import { useDispatch, useSelector } from "react-redux";
-// import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 export default function Admin() {
   const [show, setShow] = React.useState(false);
@@ -26,18 +25,18 @@ export default function Admin() {
     mode: "onChange",
   });
 
-  // const isAuth = useSelector(selectIsAuth);
+  const isAuth = useSelector(selectIsAuth);
   const dispatch = useDispatch();
 
   const onSubmit = (values) => {
     dispatch(fetchAuth(values));
   };
 
-  // if (isAuth) {
-  //   return <Navigate to="/" />
-  // }
+  if (isAuth) {
+    return <Navigate to="/main" />
+  }
 
-  console.log(errors, isValid);
+  console.log('isAuth', isAuth);
 
   return (
     <>
@@ -48,13 +47,14 @@ export default function Admin() {
           </div>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="inputs">
-              <p> Логин {errors?.login && (
-                <p className="error">{errors?.login?.message || "error"} </p>
-              )}</p>
+              <p> Логин </p>
               <input
                 type="text"
                 {...register("login", { required: "Введите логин!" })}
               />
+              {errors?.login && (
+                <p className="errorValid">{errors?.login?.message || "error"} </p>
+              )}
               
               <p> Пароль</p>
 
@@ -64,7 +64,7 @@ export default function Admin() {
               />
 
               {errors?.password && (
-                <p className="error">{errors?.password?.message || "error"} </p>
+                <p className="errorValid">{errors?.password?.message || "error"} </p>
               )}
             </div>
             <div className="check">
@@ -76,12 +76,16 @@ export default function Admin() {
               <p> Показать пароль</p>
             </div>
 
+            { !isValid ? 
+                <p className="errorValid"> нет доступа </p> : ""
+              }
+
             <div className="auth_bottom">
               <button type="submit" className="button">
-                <Link to={"/main"}>
+                {/* <Link to={"/main"}> */}
                   Войти
 
-                </Link>
+                {/* </Link> */}
               </button>
             </div>
 

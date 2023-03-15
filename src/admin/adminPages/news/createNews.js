@@ -1,5 +1,6 @@
 import React from "react";
-import upload from '../../../assets/upload.svg'
+import upload from "../../../assets/upload.svg";
+import { Link } from "react-router-dom";
 
 export default function CreateNews() {
   return (
@@ -35,9 +36,9 @@ export default function CreateNews() {
             <input className="dateInput" type="date" />
             <div className="bottomButtons">
               <button className="createAdminBtn"> Создать </button>
-              {/* <Link href="./news"> */}
-                <button className="cancelAdminBtn"> Отменить </button>
-              {/* </Link>s */}
+              <Link to={'/main/news'} >
+              <button className="cancelAdminBtn"> Отменить </button>
+              </Link>
             </div>
           </form>
         </div>

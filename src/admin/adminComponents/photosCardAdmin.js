@@ -1,6 +1,6 @@
-
 import React from "react";
-import basket from '../../assets/basket.svg'
+import basket from "../../assets/basket.svg";
+import { Link } from "react-router-dom";
 
 export default function photosCardAdmin({ image, date, summary }) {
   return (
@@ -15,9 +15,9 @@ export default function photosCardAdmin({ image, date, summary }) {
         <div className="data"> {date} </div>
         <div className="summary">{summary}</div>
         <div className="edit">
-          {/* <Link href="../../adminPages/photos/editPhoto"> */}
+          <Link to={"/editphoto"}>
             <button> Редактировать </button>
-          {/* </Link> */}
+          </Link>
         </div>
       </div>
     </>

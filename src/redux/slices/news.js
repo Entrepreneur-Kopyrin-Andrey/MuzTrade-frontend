@@ -16,7 +16,7 @@ const initialState = {
 const newsSlice = createSlice({
   name: "news",
   initialState,
-  reducers: {},
+  reducer: {},
   extraReducers: {
     [fetchNews.pending]: (state) => { //загрузка
       state.news.items = [];

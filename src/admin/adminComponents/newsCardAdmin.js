@@ -1,4 +1,5 @@
 import basket from "../../assets/basket.svg";
+import { Link } from "react-router-dom";
 
 export default function NewsCardAdmin({ image, date, summary }) {
   return (
@@ -13,9 +14,9 @@ export default function NewsCardAdmin({ image, date, summary }) {
         <div className="data"> {date} </div>
         <div className="summary">{summary}</div>
         <div className="edit">
-          {/* <Link href="../../adminPages/news/editNews"> */}
-          <button> Редактировать </button>
-          {/* </Link> */}
+          <Link to={"/editnews"}>
+            <button> Редактировать </button>
+          </Link>
         </div>
       </div>
     </>

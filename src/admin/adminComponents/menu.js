@@ -1,6 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import News from "../adminPages/news/news";
+import { NavLink } from "react-router-dom";
+
 // const NavLinks = [
 //   {
 //     title: "Картинки",
@@ -112,17 +112,36 @@ import News from "../adminPages/news/news";
 // ];
 
 export default function Menu() {
-  const [link, setLink] = React.useState(0);
-
-  const onClickLink = (index) => {
-    setLink(index);
-  };
   return (
     <>
-      <div className="menu">
-        <a href="/main/news">Новости</a>
+      <div className="menuWrapper">
+        <ul>
+          <li>
+            <NavLink
+              to={"/main/news"}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Новости
+            </NavLink>
+          </li>
 
-        <a href="/main/photos">Картинки</a>
+          <li>
+            <NavLink
+              to={"/main/photos"}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Картинки
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={"/"}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Выйти
+            </NavLink>
+          </li>
+        </ul>
       </div>
     </>
   );

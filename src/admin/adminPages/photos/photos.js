@@ -1,10 +1,10 @@
 import React from "react";
-// import { AdminLayout } from "../../../../layout/AdminLayout";
 import PhotosCardAdmin from "../../adminComponents/photosCardAdmin";
 import { PhotosData } from "../../photosCard";
 import search from '../../../assets/search.svg';
 import del from '../../../assets/delete.svg'
 import Menu from './../../adminComponents/menu';
+import { Link } from "react-router-dom";
 
 
 const Photos = () => {
@@ -77,9 +77,9 @@ const Photos = () => {
                   stroke-linejoin="round"
                 />
               </svg>
-              {/* <Link href="./createPhoto"> */}
+              <Link to={"/createphoto"}>
                 <p> Создать картинку </p>
-              {/* </Link> */}
+              </Link>
             </div>
           </div>
           <div className="content">
