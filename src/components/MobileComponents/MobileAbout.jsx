@@ -1,6 +1,5 @@
 import React from 'react'
-import Link from "next/link";
-import Image from "next/image";
+import about from '../../assets/about.svg'
 
 
 export default function MobileAbout() {
@@ -10,8 +9,8 @@ export default function MobileAbout() {
         <div className='container about'>
         <h2 className="about__title Neucha400">Информация о нас</h2>
         <div className="about__image">
-          <Image
-          src={'/about.svg'}
+          <img
+          src={about}
           alt=""
           width={700}
           height={359}

@@ -4,6 +4,7 @@ import { NewsData } from "../../newsCard";
 import search from "../../../assets/search.svg";
 import del from "../../../assets/delete.svg";
 import {Link} from "react-router-dom"
+import Menu from './../../adminComponents/menu';
 
 const News = () => {
   const [searchValue, setSearchValue] = React.useState("");
@@ -18,6 +19,7 @@ const News = () => {
   return (
     <>
       <div className="wrapperNewsAdmin">
+        <Menu />
         <div className="wrapperNews">
           <div className="serach_wrap">
             <div className="serach_container">

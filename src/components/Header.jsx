@@ -1,7 +1,14 @@
 import React from 'react'
 import logo from '../assets/logo.svg'
+import phone from '../assets/phone.svg'
 
-export const Header = () => {
+export const Header = ({ onChange }) => {
+
+  const handleChange = () => {
+    onChange(true);
+  }
+
+
   return (
     <>
     
@@ -13,35 +20,35 @@ export const Header = () => {
   <nav>
     <ul>
       <li>Главная </li>
-      {/* <Link href={"#about"}> */}
+      <a href={"#about"}> 
         <li className="Monrat400"> О нас</li>
-      {/* </Link> */}
-      {/* <Link href={"#news"}> */}
+      </a> 
+      <a href={"#news"}> 
         <li className="Monrat400"> Новость</li>
-      {/* </Link> */}
-      {/* <Link href={"#gallery"}> */}
+      </a> 
+      <a href={"#gallery"}> 
         <li className="Monrat400">Галерея</li>
-      {/* </Link> */}
-      {/* <Link href={"#equipment"}> */}
+      </a> 
+      <a href={"#equipment"}> 
         <li className="Monrat400">Оборудование</li>
-      {/* </Link> */}
-      {/* <Link href={"#contacts"}> */}
+      </a>
+      <a href={"#contacts"}> 
         <li className="Monrat400">Контакты</li>
-      {/* </Link> */}
+      </a> 
     </ul>
   </nav>
 
   <div className="number">
-    {/* <Image src={"/phone.svg"} alt="phone" width={25} height={25} /> */}
+    <img src={phone} alt="phone" width={25} height={25} />
     <a href="tel:+78152424373" className="phoneNumber Monrat400">
       8 (815) 242-43-73
     </a>
   </div>
 
   <button className="request Monrat400" 
-  // onClick={
-  //   ()=>handleChange()
-  //   }
+    onClick={
+      ()=>handleChange()
+    }
     >Оставить заявку
   </button>
 </div>

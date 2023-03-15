@@ -1,11 +1,18 @@
 import React from 'react'
-import Link from "next/link";
-import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useState, useContext, createContext } from 'react'
 import { ValueContext } from '../hooks/context'
+import arrow from '../assets/arrow.svg'
+import ph1 from '../assets/gallery/ph1.svg'
+import ph2 from '../assets/gallery/ph2.svg'
+import ph3 from '../assets/gallery/ph3.svg'
+import ph4 from '../assets/gallery/ph4.svg'
+import ph5 from '../assets/gallery/ph5.svg'
+import ph6 from '../assets/gallery/ph6.svg'
+import ph7 from '../assets/gallery/ph7.svg'
+import ph8 from '../assets/gallery/ph8.svg'
+import ph9 from '../assets/gallery/ph9.svg'
 // создаем контекст
 
 
@@ -13,10 +20,10 @@ import { ValueContext } from '../hooks/context'
 export default function Gallery() {
 
   const SlickArrowRight = () => (
-      <Image className='slick-next slick-arrow' src={'/arrow.svg'} alt="" width={145} height={145}/>
+      <img className='slick-next slick-arrow' src={arrow} alt="" width={145} height={145}/>
   );
   const SlickArrowLeft = () => (
-      <Image className='slick-prev slick-arrow'  src={'/arrow.svg'} alt="" width={145} height={145}/>
+      <img className='slick-prev slick-arrow' src={arrow} alt="" width={145} height={145}/>
   );
 
   const { setValueSrc } = React.useContext(ValueContext)
@@ -43,101 +50,101 @@ export default function Gallery() {
   const data = [
     
       {
-        src: '/gallery/ph1.svg',
+        src: ph1,
         title: 'Дата мероприятия',
         description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
       },
       {
-        src: '/gallery/ph2.svg',
+        src: ph2,
         title: 'Дата ',
         description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
       },
       {
-        src: '/gallery/ph3.svg',
+        src: ph3,
         title: 'Дата мероприятия',
         description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
       },
     
     
       {
-        src: '/gallery/ph4.svg',
+        src: ph4,
         title: 'Дата мероприятия',
         description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
       },
       {
-        src: '/gallery/ph5.svg',
+        src: ph5,
         title: 'Дата мероприятия',
         description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
       },
       {
-        src: '/gallery/ph6.svg',
+        src: ph6,
         title: 'Дата мероприятия',
         description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
       },
     
     
       {
-        src: '/gallery/ph7.svg',
+        src: ph7,
         title: 'Дата мероприятия',
         description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
       },
       {
-        src: '/gallery/ph8.svg',
+        src: ph8,
         title: 'Дата мероприятия',
         description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
       },
       {
-        src: '/gallery/ph9.svg',
+        src: ph9,
         title: 'Дата мероприятия',
         description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
       },
   
     
       {
-        src: '/gallery/ph1.svg',
+        src: ph1,
         title: 'Дата мероприятия',
         description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
       },
       {
-        src: '/gallery/ph2.svg',
+        src: ph2,
         title: 'Дата мероприятия',
         description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
       },
       {
-        src: '/gallery/ph3.svg',
-        title: 'Дата мероприятия',
-        description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
-      },
-    
-    
-      {
-        src: '/gallery/ph4.svg',
-        title: 'Дата мероприятия',
-        description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
-      },
-      {
-        src: '/gallery/ph5.svg',
-        title: 'Дата мероприятия',
-        description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
-      },
-      {
-        src: '/gallery/ph6.svg',
+        src: ph3,
         title: 'Дата мероприятия',
         description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
       },
     
+    
       {
-        src: '/gallery/ph7.svg',
+        src: ph4,
         title: 'Дата мероприятия',
         description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
       },
       {
-        src: '/gallery/ph8.svg',
+        src: ph5,
         title: 'Дата мероприятия',
         description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
       },
       {
-        src: '/gallery/ph9.svg',
+        src: ph6,
+        title: 'Дата мероприятия',
+        description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
+      },
+    
+      {
+        src: ph7,
+        title: 'Дата мероприятия',
+        description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
+      },
+      {
+        src: ph8,
+        title: 'Дата мероприятия',
+        description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
+      },
+      {
+        src: ph9,
         title: 'Дата мероприятия',
         description: 'Напишите здесь краткое описание, состоящее из 2-3 предложений',
       },
@@ -153,7 +160,7 @@ export default function Gallery() {
               {data.map((item, index) => {
                  return(
                       <div className="img__link" onClick={() => handleImage(item.src)}>
-                        <Image key={index} src={item.src} alt={item.title} width={516} height={385}/>
+                        <img key={index} src={item.src} alt={item.title} width={516} height={385}/>
                         <span className="img__mask">
                             <h4>{item.title}</h4>
                             <p>{item.description}</p>

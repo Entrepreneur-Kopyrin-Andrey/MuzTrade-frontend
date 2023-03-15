@@ -78,7 +78,7 @@ export default function Admin() {
 
             <div className="auth_bottom">
               <button type="submit" className="button">
-                <Link to={"/main/news"}>
+                <Link to={"/main"}>
                   Войти
 
                 </Link>

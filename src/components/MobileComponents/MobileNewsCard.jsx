@@ -1,6 +1,4 @@
 import React from 'react'
-import Link from "next/link";
-import Image from "next/image";
 
 
 export default function MobileNewsCard({src}) {
@@ -8,7 +6,7 @@ export default function MobileNewsCard({src}) {
         <>
             <div className="newsCard">
                 <div className="newsCard__image">
-                    <Image
+                    <img
                         src={src}
                         alt="newscard"
                         width={385}

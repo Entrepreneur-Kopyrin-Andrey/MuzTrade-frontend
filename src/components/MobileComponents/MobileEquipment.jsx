@@ -1,6 +1,8 @@
 import React from 'react'
-import Link from "next/link";
-import Image from "next/image";
+import sound from '../../assets/sound.svg'
+import scene from '../../assets/scene.svg'
+import light from '../../assets/light.svg'
+import equipment from '../../assets/equipment.svg'
 
 
 export default function MobileEquipment() {
@@ -23,28 +25,28 @@ export default function MobileEquipment() {
             составления спецификаций
             до монтажа и обслуживания.
         </p>
-        <p className="equipment__textLink Monrat400">Список предлагаемого оборудование можно <Link className='Monrat400' href={'/'}>скачать</Link></p>
+        <p className="equipment__textLink Monrat400">Список предлагаемого оборудование можно <a className='Monrat400' href={'/'}>скачать</a></p>
         <div className="equipment__photos">
-                <Image
-                    src={'/sound.svg'}
+                <img
+                    src={sound}
                     alt="about"
                     width={396}
                     height={384}
                 />
-                <Image
-                    src={'/scene.svg'}
+                <img
+                    src={scene}
                     alt="about"
                     width={396}
                     height={384}
                 />
-                <Image
-                    src={'/light.svg'}
+                <img
+                    src={light}
                     alt="about"
                     width={396}
                     height={384}
                 />
-                <Image
-                  src={'/equipment.svg'}
+                <img
+                  src={equipment}
                   alt="about"
                   width={396}
                   height={384}

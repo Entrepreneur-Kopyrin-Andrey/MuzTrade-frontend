@@ -1,8 +1,12 @@
 import React from 'react'
-import Link from "next/link";
-import Image from "next/image";
 import ModalVideo from "../ModalVideo.jsx";
 import { ValueContext } from '../../hooks/context';
+import waves from '../../assets/waves.svg'
+import main1 from '../../assets/main1.svg'
+import main2 from '../../assets/main2.svg'
+import plus from '../../assets/plus.svg'
+import button from '../../assets/button.svg'
+import play from '../../assets/play.svg'
 
 export default function MobileMain() {
 
@@ -21,47 +25,47 @@ export default function MobileMain() {
             </div>
 
             <div className="rightSide">
-            <Image
+            <img
               className="waves"
-              src={"/waves.svg"}
+              src={waves}
               alt="main1"
               width={179}
               height={200}
             />
 
-            <Image
+            <img
               className="main1"
-              src={"/main1.svg"}
+              src={main1}
               alt="main1"
               width={396}
               height={384}
             />
 
-            <Image
+            <img
               className="main2"
-              src={"/main2.svg"}
+              src={main2}
               alt="main2"
               width={396}
               height={384}
             />
-            <Image
+            <img
               className="plus"
-              src={"/plus.svg"}
+              src={plus}
               alt="main2"
               width={110}
               height={110}
             />
             <div className="circleBtn" onClick={() => setModalActive(!modalActive)}>
-              <Image
+              <img
                 className="infinite"
-                src={"/button.svg"}
+                src={button}
                 alt="main2"
                 width={200}
                 height={200}
               />
 
-              <Image
-                src={"/play.svg"}
+              <img
+                src={play}
                 className="play"
                 alt="main2"
                 width={40}

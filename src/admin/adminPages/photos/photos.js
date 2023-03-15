@@ -4,7 +4,7 @@ import PhotosCardAdmin from "../../adminComponents/photosCardAdmin";
 import { PhotosData } from "../../photosCard";
 import search from '../../../assets/search.svg';
 import del from '../../../assets/delete.svg'
-
+import Menu from './../../adminComponents/menu';
 
 
 const Photos = () => {
@@ -20,6 +20,7 @@ const Photos = () => {
   return (
     <>
       <div className="wrapperNewsAdmin">
+        <Menu />
         <div className="wrapperNews">
           <div className="serach_wrap">
             <div className="serach_container">

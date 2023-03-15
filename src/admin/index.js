@@ -8,13 +8,6 @@ import { Photos } from "./adminPages/photos/photos";
 function Admin() {
   return (
     <div className="wrapperMenu">
-       < Menu />
-      <div className="routes">
-        <Routes>
-          <Route path="/main/news" element={<News />} />
-          <Route path="/main/photos" element={<Photos />} />
-        </Routes>
-      </div>
     </div>
   );
 }

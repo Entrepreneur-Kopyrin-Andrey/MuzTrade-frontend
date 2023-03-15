@@ -1,9 +1,7 @@
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
-
-
+import stars from '../../assets/stars.svg'
+import vk from '../../assets/vk.svg'
 
 export default function MobileContacts() {
   return (
@@ -11,7 +9,7 @@ export default function MobileContacts() {
     <div className="contacts" id="contacts">
       <div className="container contacts">
         <div className="contacts__header">
-            <Image src={"/stars.svg"} alt="about" width={250} height={30} />
+            <img src={stars} alt="about" width={250} height={30} />
             <h2 className="contacts__title Neucha400">Контакты</h2>
         </div>
         <div className="contacts__map">
@@ -46,14 +44,14 @@ export default function MobileContacts() {
           </p>
         </div>
         <p className='contacts__p Monrat500'>Мы в соц.сетях:</p>
-        <Link href={"https://vk.com/muztrade51"} className="connections__vk">
-                <Image
-                  src={"/vk.svg"}
+        <a href={"https://vk.com/muztrade51"} className="connections__vk">
+                <img
+                  src={vk}
                   alt="vk"
                   width={58}
                   height={58}
                 />
-        </Link>
+        </a>
       </div>
       </div>
     </>

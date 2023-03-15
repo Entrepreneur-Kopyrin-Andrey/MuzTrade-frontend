@@ -85,9 +85,6 @@
 }
 
 //COMPONENTS
-.wrapperMenu {
-  display: grid;
-  grid-template-columns: 10% 90%;
   .menu {
     display: flex;
     flex-direction: column;
@@ -115,10 +112,6 @@
     }
   }
 
-  .routes{
-
-  }
-}
 
 .serach_wrap {
   display: flex;
@@ -227,13 +220,13 @@
 // PAGES
 
 .wrapperNewsAdmin {
-  overflow: auto;
   max-height: 100vh;
+  display: flex;
   .wrapperNews {
     width: 100%;
+    overflow: auto;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     .content {
       width: 95%;
       margin: 0 auto;
