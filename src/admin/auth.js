@@ -76,24 +76,13 @@ export default function Admin() {
               <p> Показать пароль</p>
             </div>
 
-            { !isValid ? 
-                <p className="errorValid"> нет доступа </p> : ""
-              }
+            
 
             <div className="auth_bottom">
               <button type="submit" className="button">
-                {/* <Link to={"/main"}> */}
                   Войти
-
-                {/* </Link> */}
               </button>
             </div>
-
-            {/* <div className="auth_bottom">
-            <Link href="/admin/adminPages/news/news">
-              <h4 className="button">Войти</h4>
-            </Link>
-          </div> */}
           </form>
         </div>
       </div>
