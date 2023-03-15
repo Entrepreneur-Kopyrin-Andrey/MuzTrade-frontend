@@ -26,15 +26,22 @@ import Footer from "./components/Footer";
 import PortfolioButton from "./components/PortfolioButton";
 import RequestModal from './components/Modal/RequestModal';
 import ImageModal from './components/Modal/ImageModal';
+import MobileMenu from './components/Modal/MobileMenu';
+
 
 function App() {
   const [width, height] = useWindowSize();
   const [valueSrc, setValueSrc] = React.useState("");
   const [modalValue, setModalValue] = React.useState(true);
   const [requestModalValue, setRequestModalValue] = React.useState(false);
+  
+  const [menuValue, setMenuValue] = React.useState(false);
 
+  const handleMenuChange = (value) => {
+    setMenuValue(value)
+  }
 
-  const handleChange = (value) => {
+  const handleRequestChange = (value) => {
     setRequestModalValue(value)
   }
 
@@ -55,7 +62,7 @@ function App() {
       >
         {width > 1024 ? (
           <>
-            <Header  onChange={handleChange}/>
+            <Header  onChange={handleRequestChange}/>
             <PortfolioButton />
             <Main />
             <About />
@@ -67,7 +74,7 @@ function App() {
           </>
         ) : (
           <>
-            <MobileHeader />
+            <MobileHeader onChange={handleMenuChange}/>
             <MobileMain />
             <MobileAbout />
             <MobileNews />
@@ -76,6 +83,7 @@ function App() {
             <MobileContacts />
           </>
         )}
+        <MobileMenu setValue={setMenuValue} value={menuValue}></MobileMenu> 
         { requestModalValue && <RequestModal setValue={setRequestModalValue} value={requestModalValue}></RequestModal> }
         { modalValue && valueSrc && <ImageModal modalClose={modalClose} valueSrc={valueSrc}></ImageModal>}
       </ValueContext.Provider>

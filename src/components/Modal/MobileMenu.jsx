@@ -1,7 +1,5 @@
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-
+import menuClose from '../../assets/menuClose.svg'
 
 export default function MobileMenu({ value, setValue }) {
   const handleModalClick = (event) => {
@@ -19,27 +17,27 @@ export default function MobileMenu({ value, setValue }) {
             setValue(false);
           }}
         >
-          <Image src={"/menuClose.svg"} alt="" width={31} height={34}></Image>
+          <img src={menuClose} alt="" width={31} height={34}></img>
         </div>
           <div className="menuContent">
-            <Link href={"#"}>
+            <a href={"#"}>
                 <p className="menuContent__p" data-layout>Главная</p>
-            </Link>
-            <Link href={"#about"}>
+            </a>
+            <a href={"#about"}>
                 <p className="menuContent__p" data-layout>О нас</p>
-            </Link>
-            <Link href={"#news"}>
+            </a>
+            <a href={"#news"}>
                 <p className="menuContent__p" data-layout>Новость</p>
-            </Link>
-            <Link href={"#gallery"}>
+            </a>
+            <a href={"#gallery"}>
                 <p className="menuContent__p" data-layout>Галерея</p>
-            </Link>
-            <Link href={"#equipment"}>
+            </a>
+            <a href={"#equipment"}>
                 <p className="menuContent__p" data-layout>Оборудование</p>
-            </Link>
-            <Link href={"#contacts"}>
+            </a>
+            <a href={"#contacts"}>
                 <p className="menuContent__p" data-layout>Контакты</p>
-            </Link>
+            </a>
           </div>
       </div>
     </>

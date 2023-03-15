@@ -12,23 +12,25 @@ export default function MobileHeader({ onChange }) {
 
   return (
     <>
-      <div className="wrapper" id="wrapper">
-        <img
-          src={logo}
-          className="logo"
-          alt="logo"
-          width={210}
-          height={80}
-        />
-        <img
-          src={menu}
-          className="menu"
-          alt="logo"
-          width={17}
-          height={35}
-          onClick={handleChange}
-        />
-      </div>
+      <header>
+        <div className="wrapper" id="wrapper">
+          <img
+            src={logo}
+            className="logo"
+            alt="logo"
+            width={210}
+            height={80}
+          />
+          <img
+            src={menu}
+            className="menu"
+            alt="logo"
+            width={17}
+            height={35}
+            onClick={handleChange}
+          />
+        </div>
+      </header>
     </>
   );
 }

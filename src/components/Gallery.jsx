@@ -159,8 +159,8 @@ export default function Gallery() {
             <Slider {...settings}>
               {data.map((item, index) => {
                  return(
-                      <div className="img__link" onClick={() => handleImage(item.src)}>
-                        <img key={index} src={item.src} alt={item.title} width={516} height={385}/>
+                      <div key={index} className="img__link" onClick={() => handleImage(item.src)}>
+                        <img src={item.src} alt={item.title} width={516} height={385}/>
                         <span className="img__mask">
                             <h4>{item.title}</h4>
                             <p>{item.description}</p>

@@ -1,8 +1,8 @@
 import React from "react";
 import { DefaultPlayer as Video } from "react-html5video";
-import VideoFile from "../assets/video.mp4";
+import VideoFile from "../../assets/video.mp4";
 import "react-html5video/dist/styles.css";
-import close from '../assets/close.svg'
+import close from '../../assets/close.svg'
 
 
 export default function ModalVideo() {

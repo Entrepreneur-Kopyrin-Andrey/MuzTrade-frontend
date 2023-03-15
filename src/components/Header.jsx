@@ -11,49 +11,47 @@ export const Header = ({ onChange }) => {
 
   return (
     <>
-    
-    <header>
-<div className="wrapper">
-  
-  <img src={logo} alt="" />
+      <header>
+        <div className="wrapper">
+          
+          <img src={logo} alt="" />
 
-  <nav>
-    <ul>
-      <li>Главная </li>
-      <a href={"#about"}> 
-        <li className="Monrat400"> О нас</li>
-      </a> 
-      <a href={"#news"}> 
-        <li className="Monrat400"> Новость</li>
-      </a> 
-      <a href={"#gallery"}> 
-        <li className="Monrat400">Галерея</li>
-      </a> 
-      <a href={"#equipment"}> 
-        <li className="Monrat400">Оборудование</li>
-      </a>
-      <a href={"#contacts"}> 
-        <li className="Monrat400">Контакты</li>
-      </a> 
-    </ul>
-  </nav>
+          <nav>
+            <ul>
+              <li>Главная </li>
+              <a href={"#about"}> 
+                <li className="Monrat400"> О нас</li>
+              </a> 
+              <a href={"#news"}> 
+                <li className="Monrat400"> Новость</li>
+              </a> 
+              <a href={"#gallery"}> 
+                <li className="Monrat400">Галерея</li>
+              </a> 
+              <a href={"#equipment"}> 
+                <li className="Monrat400">Оборудование</li>
+              </a>
+              <a href={"#contacts"}> 
+                <li className="Monrat400">Контакты</li>
+              </a> 
+            </ul>
+          </nav>
 
-  <div className="number">
-    <img src={phone} alt="phone" width={25} height={25} />
-    <a href="tel:+78152424373" className="phoneNumber Monrat400">
-      8 (815) 242-43-73
-    </a>
-  </div>
+          <div className="number">
+            <img src={phone} alt="phone" width={25} height={25} />
+            <a href="tel:+78152424373" className="phoneNumber Monrat400">
+              8 (815) 242-43-73
+            </a>
+          </div>
 
-  <button className="request Monrat400" 
-    onClick={
-      ()=>handleChange()
-    }
-    >Оставить заявку
-  </button>
-</div>
-</header>
-    
+          <button className="request Monrat400" 
+            onClick={
+              ()=>handleChange()
+            }
+            >Оставить заявку
+          </button>
+        </div>
+      </header>
     </>
   )
 }

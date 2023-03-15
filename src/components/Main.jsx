@@ -1,6 +1,6 @@
 import React from "react";
 
-import ModalVideo from "../components/ModalVideo.jsx";
+import ModalVideo from "./Modal/ModalVideo.jsx";
 import { ValueContext } from './../hooks/context';
 import waves from '../assets/waves.svg'
 import main1 from '../assets/main1.svg'
