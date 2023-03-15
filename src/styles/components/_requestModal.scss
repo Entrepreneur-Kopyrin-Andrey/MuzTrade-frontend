@@ -1,0 +1,334 @@
+
+.requestBackground{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 150;
+    background: rgba(0,0,0,0.5);
+    .requestClose{
+      position: absolute;
+      right: 32%;
+      top: 11%;
+      cursor: pointer;
+    }
+  .requestModal{
+      height: auto;
+      width: 26%;
+      position: absolute;
+      top: 15%;
+      left: 37%;
+      z-index: 10;
+      opacity: 1;
+      background-color: white;
+      color: #3F3F3F;
+      h2{
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 30px;
+      }
+      .requestContent{
+        width: 90%;
+        margin: 0 auto;
+        > * {
+          width: 100%;
+        }
+        &__title{
+          margin-top: 41px;
+        }
+        &__undertitle{
+          margin-top: 17px;
+          margin-bottom: 31px;
+          text-align: center;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 26px;
+        }
+        &__name, &__phone{
+          >*{
+            width: 100%;
+          }
+          p{
+            margin-top: 31px;
+            font-size: 20px;
+            font-weight: 400;
+          }
+          input{
+            height: 58px;
+            border: 0.5px solid #D1D1D1;
+            background-color: #F2F2F2;
+            font-size: 20px;
+            padding-left: 20px;
+            margin-top: 27px;
+          }
+        }
+        &__button{
+          margin-top: 42px;
+          cursor: pointer;
+        }
+        &__agreement{
+          margin-top: 17px;
+          font-size: 15px;
+          font-weight: 400;
+        }
+        &__more{
+          margin-top: 32px;
+          margin-bottom: 41px;
+          text-align: center;
+          cursor: pointer;
+        }
+        &__more:hover{
+          text-decoration: underline;
+        }
+  
+      }
+  }
+  @media (max-width: 1800px) {
+    .requestModal{
+      width: 32%;
+      left: 33%;
+    }
+  }
+  @media (max-width: 1350px) {
+    .requestModal{
+      width: 35%;
+      left: 31%;
+    }
+  }
+  @media (max-width: 1250px) {
+    .requestModal{
+      width: 38%;
+      left: 29%;
+    }
+  }
+  @media (max-width: 1250px) {
+    .requestModal{
+      width: 41%;
+      left: 27%;
+    }
+  }
+  @media (max-width: 1024px){
+    .requestModal{
+      width: 60%;
+      left: 19%;
+      h2{
+        font-size: 21px !important;
+      }
+      h3{
+        font-size: 17px !important;
+      }
+      div{
+        >p{
+          font-size: 17px !important;
+        }
+        input{
+          font-size: 17px !important;
+        }
+      }
+      button{
+        font-size: 17px !important;
+      }
+      .requestContent__agreement{
+        font-size: 13px !important;
+      }
+      .requestContent__more{
+        font-size: 15px !important;
+      }
+    }
+    .requestClose{
+      position: absolute;
+      right: 17%;
+      top: 8%;
+      z-index: 160;
+      cursor: pointer;
+    }
+  }
+  @media (max-width: 620px){
+    .requestModal{
+      width: 75%;
+      left: 12%;
+      h2{
+        font-size: 19px !important;
+      }
+      h3{
+        font-size: 15px !important;
+      }
+      div{
+        >p{
+          font-size: 15px !important;
+        }
+        input{
+          font-size: 15px !important;
+        }
+      }
+      button{
+        font-size: 15px !important;
+      }
+      .requestContent__agreement{
+        font-size: 11px !important;
+      }
+      .requestContent__more{
+        font-size: 13px !important;
+      }
+    }
+    .requestClose{
+      position: absolute;
+      right: 9%;
+      top: 8%;
+      z-index: 160;
+      cursor: pointer;
+    }
+  }
+  @media (max-width: 475px){
+    .requestModal{
+      width: 85%;
+      left: 7%;
+    }
+    .requestClose{
+      right: 4%;
+      top: 8%;
+    }
+  }
+  @media (max-width: 375px){
+    .requestModal{
+      width: 90%;
+      left: 5%;
+      h2{
+        font-size: 17px !important;
+      }
+      h3{
+        font-size: 14px !important;
+      }
+      div{
+        >p{
+          font-size: 14px !important;
+        }
+        input{
+          font-size: 14px !important;
+        }
+      }
+      button{
+        font-size: 14px !important;
+      }
+      .requestContent__agreement{
+        font-size: 10px !important;
+      }
+      .requestContent__more{
+        font-size: 12px !important;
+      }
+    }
+    .requestClose{
+      right: 5%;
+      top: 8%;
+    }
+  }
+  }
+
+  .imageBackground{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+    .requestClose{
+      position: absolute;
+      right: 27%;
+      top: 17%;
+      z-index: 20;
+      cursor: pointer;
+    }
+  .imageModal{
+      height: 650px;
+      width: auto;
+      position: absolute;
+      z-index: 10;
+      top: 15%;
+      left: 25%;
+      opacity: 1;
+      background-color: white;
+      color: #3F3F3F;
+      text-align: center;
+      >img{
+        width:100%;
+      }
+  }
+  }
+
+
+
+  .menuModal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    right: -100vw;
+    top: 0;
+    z-index: 150;
+    background-color: #F3F3F3;
+    transition: all .3s;
+    .menuClose{
+      position: absolute;
+      right: 5%;
+      top: 2%;
+      cursor: pointer;
+    }
+  }
+  .menuModalactive{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 130;
+    background-color: #F3F3F3;
+    transition: all .3s;
+    .menuClose{
+      position: absolute;
+      right: 5%;
+      top: 2%;
+      cursor: pointer;
+    }
+    .menuContent{
+      margin-left: 40px;
+      margin-top: 150px;
+      &__p{
+        font-size: 35px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin: 70px;
+      }
+    }
+    @media (max-width: 768px){
+      .menuContent{
+        margin-left: 20px;
+        margin-top: 120px;
+        &__p{
+          font-size: 28px;
+          margin: 50px;
+        }
+      }
+    }
+    @media (max-width: 425px){
+      .menuContent{
+        margin-left: 15px;
+        margin-top: 120px;
+        &__p{
+          font-size: 22px;
+          margin: 45px;
+        }
+      }
+    }
+    @media (max-width: 375px){
+      .menuContent{
+        margin-left: 5px;
+        margin-top: 90px;
+        &__p{
+          font-size: 18px;
+          margin: 40px;
+        }
+      }
+    }
+  }
