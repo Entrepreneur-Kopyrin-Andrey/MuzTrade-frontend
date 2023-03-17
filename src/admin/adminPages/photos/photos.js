@@ -1,10 +1,12 @@
 import React from "react";
 import PhotosCardAdmin from "../../adminComponents/photosCardAdmin";
-import { PhotosData } from "../../photosCard";
 import search from "../../../assets/search.svg";
 import del from "../../../assets/delete.svg";
 import Menu from "./../../adminComponents/menu";
 import { Link } from "react-router-dom";
+
+import { useDispatch, useSelector } from "react-redux";
+import { fetchPhotos } from "../../../redux/slices/photos";
 
 const Photos = () => {
   const [searchValue, setSearchValue] = React.useState("");
@@ -16,6 +18,14 @@ const Photos = () => {
   const clean = () => {
     setSearchValue("");
   };
+
+  const dispatch = useDispatch();
+  const { photos } = useSelector((state) => state.photos);
+
+  React.useEffect(() => {
+    dispatch(fetchPhotos());
+  }, []);
+
   return (
     <>
       <div className="wrapperNewsAdmin">
@@ -86,11 +96,11 @@ const Photos = () => {
           </div>
           <div className="container">
             <div className="content">
-              {PhotosData.filter((obj) =>
+              {(photos.items).filter((obj) =>
                 obj.summary.toLowerCase().includes(searchValue.toLowerCase())
-              ).map((obj) => (
+              ).map((obj, index) => (
                 <PhotosCardAdmin
-                  image={obj.image}
+                  src={obj.imageUrl}
                   date={obj.date}
                   summary={obj.summary}
                 />

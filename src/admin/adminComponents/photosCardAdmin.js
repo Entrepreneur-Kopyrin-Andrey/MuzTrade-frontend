@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function photosCardAdmin({ image, date, summary }) {
+export default function photosCardAdmin({ src, date, summary }) {
   return (
     <>
+    {console.log(date)}
       <div className="cardWrapper">
         <div className="newsImage">
-          <img src={image} alt="news" className="image" />
+          <img src={"http://localhost:4444" + src} alt="news" className="image" />
         </div>
         <div className="data"> {date} </div>
         <div className="summary">{summary}</div>

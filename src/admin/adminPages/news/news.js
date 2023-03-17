@@ -111,6 +111,7 @@ const News = () => {
                 .map((obj, index) => (
                   <NewsCardAdmin
                     key={index}
+                    src={obj.imageUrl}
                     summary={obj.summary}
                     date={obj.date}
                   />
