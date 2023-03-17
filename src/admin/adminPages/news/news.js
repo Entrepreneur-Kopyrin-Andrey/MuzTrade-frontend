@@ -1,10 +1,15 @@
 import React from "react";
 import NewsCardAdmin from "../../adminComponents/newsCardAdmin";
-import { NewsData } from "../../newsCard";
 import search from "../../../assets/search.svg";
 import del from "../../../assets/delete.svg";
-import {Link} from "react-router-dom"
-import Menu from './../../adminComponents/menu';
+import { Link } from "react-router-dom";
+import Menu from "./../../adminComponents/menu";
+
+import { selectIsAuth } from "../../../redux/slices/auth";
+import { Navigate } from "react-router-dom";
+
+import { useDispatch, useSelector } from "react-redux";
+import { fetchNews } from "../../../redux/slices/news";
 
 const News = () => {
   const [searchValue, setSearchValue] = React.useState("");
@@ -16,6 +21,19 @@ const News = () => {
   const clean = () => {
     setSearchValue("");
   };
+
+  const dispatch = useDispatch();
+  const { news } = useSelector((state) => state.news);
+
+  React.useEffect(() => {
+    dispatch(fetchNews());
+  }, []);
+
+  // const isAuth = useSelector(selectIsAuth);
+
+  // if (!isAuth) {
+  //   return <Navigate to="/" />;
+  // }
   return (
     <>
       <div className="wrapperNewsAdmin">
@@ -78,22 +96,25 @@ const News = () => {
                   stroke-linejoin="round"
                 />
               </svg>
-              <Link to={"/createnews"}>
-              <p> Создать новость </p>
+              <Link to={"/main/createnews"}>
+                <p> Создать новость </p>
               </Link>
             </div>
           </div>
-          <div className="content">
-            <div className="test">
-              {NewsData.filter((obj) =>
-                obj.summary.toLowerCase().includes(searchValue.toLowerCase())
-              ).map((obj) => (
-                <NewsCardAdmin
-                  image={obj.image}
-                  date={obj.date}
-                  summary={obj.summary}
-                />
-              ))}
+
+          <div className="container">
+            <div className="content">
+              {news.items
+                .filter((obj) =>
+                  obj.summary.toLowerCase().includes(searchValue.toLowerCase())
+                )
+                .map((obj, index) => (
+                  <NewsCardAdmin
+                    key={index}
+                    summary={obj.summary}
+                    date={obj.date}
+                  />
+                ))}
             </div>
           </div>
         </div>

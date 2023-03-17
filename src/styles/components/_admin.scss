@@ -83,8 +83,6 @@
   font-size: 18px !important;
   text-align: center !important;
   margin-top: -40px !important;
-
-
 }
 
 .menuLayout {
@@ -175,17 +173,22 @@
 
 .cardWrapper {
   filter: drop-shadow(0px 0px 60px rgba(0, 0, 0, 0.08));
+  // border: 1px solid black;
+  position: relative;
+  min-height: 100%;
+  width: 470px;
+  height: 595px;
   .newsImage {
     position: relative;
-    .delete {
-      cursor: pointer;
-      position: absolute;
-      bottom: 10px;
-      right: 25px;
-      border-radius: 50%;
-      border: 0;
-      background-color: #ec1f27;
-      padding: 10px;
+
+    .image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 330px;
+      width: 470px;
+      max-width: 470px;
+      max-height: 330px;
     }
   }
   .data {
@@ -204,20 +207,39 @@
     color: #3f3f3f;
     margin-bottom: 40px;
   }
-  .edit {
+  .adminButtons {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    button {
+    align-items: flex-end;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .edit {
       font-size: 22px;
       line-height: 131.9%;
       border: 0;
       cursor: pointer;
-      padding: 15px;
+      padding: 20px;
       text-align: center;
       background: #0a839e;
       border-radius: 33px;
       color: #ffffff;
+    }
+    .delete {
+      font-size: 22px;
+      line-height: 131.9%;
+      border: 4px solid #ec1f27;
+      cursor: pointer;
+      padding: 15px 30px;
+      text-align: center;
+      background: transparent;
+      border-radius: 33px;
+      color: black;
+      &:hover {
+        background-color: #ec1f27;
+        color: #ffffff;
+        transition: 250ms;
+      }
     }
   }
 }
@@ -230,15 +252,14 @@
   grid-template-columns: 10% 90%;
   .wrapperNews {
     width: 100%;
-    overflow: auto;
     display: flex;
     flex-direction: column;
-    .content {
+    .container {
       width: 95%;
       margin: 0 auto;
       display: flex;
       justify-content: center;
-      .test {
+      .content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 100px;
@@ -256,7 +277,6 @@
   align-items: center;
   width: 65%;
   margin: 0 auto;
-  overflow: hidden;
 
   h1 {
     margin-bottom: 30px;
@@ -268,6 +288,25 @@
     margin-bottom: 70px;
 
     .upload {
+      .fileUpl {
+        position: relative;
+        
+        
+        .uploadImg{
+          width: 475px;
+          height: 335px;
+        }
+        .deleteImg {
+          cursor: pointer;
+          position: absolute;
+          bottom: 10px;
+          right: 25px;
+          border-radius: 50%;
+          border: 0;
+          background-color: #ec1f27;
+          padding: 10px;
+        }
+      }
       cursor: pointer;
       width: 470px;
       height: 330px;

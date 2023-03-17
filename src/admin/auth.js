@@ -10,8 +10,6 @@ export default function Admin() {
     setShow(!show);
   };
 
-  
-
   const {
     register,
     handleSubmit,
@@ -28,15 +26,24 @@ export default function Admin() {
   const isAuth = useSelector(selectIsAuth);
   const dispatch = useDispatch();
 
-  const onSubmit = (values) => {
-    dispatch(fetchAuth(values));
+  const onSubmit = async (values) => {
+    // dispatch(fetchAuth(values));
+    const data = await dispatch(fetchAuth(values));
+
+    if (!data.payload) {
+      alert("Не удалось авторизоваться!");
+    }
+
+    if ("token" in data.payload) {
+      window.localStorage.setItem("token", data.payload.token);
+    } 
   };
 
   if (isAuth) {
-    return <Navigate to="/main" />
+    return <Navigate to="/main" />;
   }
 
-  console.log('isAuth', isAuth);
+  console.log("isAuth", isAuth);
 
   return (
     <>
@@ -53,9 +60,11 @@ export default function Admin() {
                 {...register("login", { required: "Введите логин!" })}
               />
               {errors?.login && (
-                <p className="errorValid">{errors?.login?.message || "error"} </p>
+                <p className="errorValid">
+                  {errors?.login?.message || "error"}{" "}
+                </p>
               )}
-              
+
               <p> Пароль</p>
 
               <input
@@ -64,7 +73,9 @@ export default function Admin() {
               />
 
               {errors?.password && (
-                <p className="errorValid">{errors?.password?.message || "error"} </p>
+                <p className="errorValid">
+                  {errors?.password?.message || "error"}{" "}
+                </p>
               )}
             </div>
             <div className="check">
@@ -76,11 +87,9 @@ export default function Admin() {
               <p> Показать пароль</p>
             </div>
 
-            
-
             <div className="auth_bottom">
               <button type="submit" className="button">
-                  Войти
+                Войти
               </button>
             </div>
           </form>

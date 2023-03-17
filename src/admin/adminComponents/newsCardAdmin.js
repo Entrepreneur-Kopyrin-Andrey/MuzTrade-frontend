@@ -1,4 +1,3 @@
-import basket from "../../assets/basket.svg";
 import { Link } from "react-router-dom";
 
 export default function NewsCardAdmin({ image, date, summary }) {
@@ -6,17 +5,15 @@ export default function NewsCardAdmin({ image, date, summary }) {
     <>
       <div className="cardWrapper">
         <div className="newsImage">
-          <img src={image} alt="news" width={470} height={330} />
-          <button className="delete">
-            <img src={basket} alt="basket" width={50} height={50} />
-          </button>
+          <img src={image} alt="news" className="image" />
         </div>
         <div className="data"> {date} </div>
         <div className="summary">{summary}</div>
-        <div className="edit">
-          <Link to={"/editnews"}>
-            <button> Редактировать </button>
+        <div className="adminButtons">
+          <Link to={"/main/editnews"}>
+            <button className="edit"> Редактировать </button>
           </Link>
+          <button className="delete"> Удалить </button>
         </div>
       </div>
     </>

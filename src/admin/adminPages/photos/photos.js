@@ -1,11 +1,10 @@
 import React from "react";
 import PhotosCardAdmin from "../../adminComponents/photosCardAdmin";
 import { PhotosData } from "../../photosCard";
-import search from '../../../assets/search.svg';
-import del from '../../../assets/delete.svg'
-import Menu from './../../adminComponents/menu';
+import search from "../../../assets/search.svg";
+import del from "../../../assets/delete.svg";
+import Menu from "./../../adminComponents/menu";
 import { Link } from "react-router-dom";
-
 
 const Photos = () => {
   const [searchValue, setSearchValue] = React.useState("");
@@ -20,7 +19,10 @@ const Photos = () => {
   return (
     <>
       <div className="wrapperNewsAdmin">
-        <Menu />
+        <div className="menu">
+          <Menu />
+        </div>
+
         <div className="wrapperNews">
           <div className="serach_wrap">
             <div className="serach_container">
@@ -77,13 +79,13 @@ const Photos = () => {
                   stroke-linejoin="round"
                 />
               </svg>
-              <Link to={"/createphoto"}>
+              <Link to={"/main/createphoto"}>
                 <p> Создать картинку </p>
               </Link>
             </div>
           </div>
-          <div className="content">
-            <div className="test">
+          <div className="container">
+            <div className="content">
               {PhotosData.filter((obj) =>
                 obj.summary.toLowerCase().includes(searchValue.toLowerCase())
               ).map((obj) => (
@@ -97,9 +99,8 @@ const Photos = () => {
           </div>
         </div>
       </div>
-      </>
- 
+    </>
   );
-}
+};
 
-export  {Photos}
+export { Photos };
