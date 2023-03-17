@@ -1,8 +1,9 @@
 import React from "react";
 import upload from "../../../assets/upload.svg";
 import { Link } from "react-router-dom";
+import NewsCardAdmin from "../../adminComponents/newsCardAdmin";
 
-export default function EditNews() {
+export default function EditNews({ src, title, description }) {
   return (
     <>
       <div className="createWrapper">
@@ -36,7 +37,7 @@ export default function EditNews() {
             <input className="dateInput" type="date" />
             <div className="bottomButtons">
               <button className="createAdminBtn"> Сохранить </button>
-              <Link to={'/main/news'}>
+              <Link to={"/main/news"}>
                 <button className="cancelAdminBtn"> Отменить </button>
               </Link>
             </div>

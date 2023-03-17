@@ -34,7 +34,7 @@ const AppRouter = () => {
       <Route path="/main/createnews" element={<CreateNews />} />
       <Route path="/main/createphoto" element={<CreatePhoto />} />
 
-      <Route path="/main/editnews" element={<EditNews />} />
+      <Route path="/main/editnews/:id" element={<EditNews />} />
       <Route path="/main/editphoto" element={<EditPhoto />} />
 
       <Route path="/main/news" element={<News />} />

@@ -6,8 +6,6 @@ import basket from "../../../assets/basket.svg";
 import { useNavigate } from "react-router-dom";
 
 export default function CreateNews() {
-  const navigate = useNavigate();
-
   const [loading, setLoading] = React.useState(false);
   const [title, setTitle] = React.useState("");
 
@@ -46,8 +44,6 @@ export default function CreateNews() {
         imageUrl,
       };
       const { data } = await axios.post("/news", fields);
-      // const id = data._id
-      // navigate(`/news/${id}`)
     } catch (error) {
       console.warn(error);
       alert("Ошибка создания новости!");

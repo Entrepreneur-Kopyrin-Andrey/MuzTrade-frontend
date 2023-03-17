@@ -22,7 +22,11 @@ const initialState = {
 const authSlice = createSlice({
   name: "auth",
   initialState,
-  reducers: {},
+  reducers: {
+    logout: (state) => {
+      state.data = null;
+    },
+  },
   extraReducers: {
     [fetchAuth.pending]: (state) => {
       state.status = "loading";
@@ -54,3 +58,5 @@ const authSlice = createSlice({
 // console.log(data)
 export const selectIsAuth = (state) => Boolean(state.auth.data);
 export const authRuducer = authSlice.reducer;
+
+export const { logout } = authSlice.actions;

@@ -6,6 +6,11 @@ export const fetchNews = createAsyncThunk("news/fetchNews", async () => {
   return data;
 });
 
+export const fetchDeleteNews = createAsyncThunk(
+  "news/fetchDeleteNews",
+  async (id) => axios.delete(`/news/${id}`)
+);
+
 const initialState = {
   news: {
     items: [],
@@ -18,7 +23,7 @@ const newsSlice = createSlice({
   initialState,
   reducer: {},
   extraReducers: {
-    [fetchNews.pending]: (state) => { //загрузка
+    [fetchNews.pending]: (state) => {
       state.news.items = [];
       state.news.status = "loading";
     },
@@ -31,6 +36,12 @@ const newsSlice = createSlice({
     [fetchNews.rejected]: (state) => {
       state.news.items = [];
       state.news.status = "error";
+    },
+
+    [fetchDeleteNews.pending]: (state, action) => {
+      state.news.items = state.news.item.filter(
+        (obj) => obj._id !== action.payload
+      );
     },
   },
 });
