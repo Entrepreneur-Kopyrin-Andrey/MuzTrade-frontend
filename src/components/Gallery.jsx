@@ -7,10 +7,7 @@ import arrow from '../assets/arrow.svg'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPhotos } from '../redux/slices/photos';
 
-
-
 export default function Gallery() {
-
 
   const dispatch = useDispatch()
   const { photos } = useSelector(state => state.photos)

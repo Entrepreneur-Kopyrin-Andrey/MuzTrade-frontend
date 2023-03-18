@@ -3,8 +3,6 @@ import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 import stars from '../assets/stars.svg'
 import vk from '../assets/vk.svg'
 
-
-
 export default function Contacts() {
   return (
     <>
@@ -69,16 +67,3 @@ export default function Contacts() {
   );
 }
 
-/*
-    <div className="contacts">
-        <div className="contacts__map"></div>
-        <div className="contacts__content contactsFlex">
-            <p className='contactsFlex__title'>Свяжитесь с нами:</p>
-            <div className='contactsFlex__connection'>
-
-            </div>
-            <p className='contactsFlex__address'>Адрес: Мурманск, Рыбный проезд, д.8</p>
-            <p className='contactsFlex__vk'><Image></Image>vk.com/muztrade</p>
-        </div>
-      </div>
-   */

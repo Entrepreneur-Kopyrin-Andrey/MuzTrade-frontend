@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { fetchAuth, logout, selectIsAuth } from "../redux/slices/auth";
+import { fetchAuth, selectIsAuth } from "../redux/slices/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 
@@ -27,7 +27,6 @@ export default function Admin() {
   const dispatch = useDispatch();
 
   const onSubmit = async (values) => {
-    // dispatch(fetchAuth(values));
     const data = await dispatch(fetchAuth(values));
 
     if (!data.payload) {

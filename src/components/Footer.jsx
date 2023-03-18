@@ -3,8 +3,6 @@ import logo from '../assets/logo.svg'
 import vk from '../assets/vk.svg'
 import phone from '../assets/phone.svg'
 
-
-
 export default function Footer() {
   return (
     <footer>

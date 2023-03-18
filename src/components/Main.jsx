@@ -1,18 +1,12 @@
 import React from "react";
-
 import ModalVideo from "./Modal/ModalVideo.jsx";
 import { ValueContext } from './../hooks/context';
 import waves from '../assets/waves.svg'
 import main1 from '../assets/main1.svg'
-
 import main2 from '../assets/main2.svg'
-
 import button from '../assets/button.svg'
-
 import play from '../assets/play.svg'
 import plus from '../assets/plus.svg'
-
-
 
 
 export default function Main() {

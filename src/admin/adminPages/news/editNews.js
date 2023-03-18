@@ -1,11 +1,9 @@
 import React from "react";
 import upload from "../../../assets/upload.svg";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import NewsCardAdmin from "../../adminComponents/newsCardAdmin";
-import axios from '../../../axios';
+import axios from "../../../axios";
 
 export default function EditNews() {
-  
   const navigate = useNavigate();
   const { id } = useParams();
   const [loading, setLoading] = React.useState(false);
@@ -17,7 +15,6 @@ export default function EditNews() {
   const [imageUrl, setImageUrl] = React.useState("");
 
   const uploadFile = React.useRef(null);
-
 
   /*const handleChangeFile = async (event) => {
     try {
@@ -56,19 +53,19 @@ export default function EditNews() {
   };
 
   React.useEffect(() => {
-      axios
-        .get(`/news/${id}`)
-        .then(({ data }) => {
-          setTitle(data.title);
-          setImageUrl(data.imageUrl);
-          setDescription(data.description);
-          setSummary(data.summary);
-        })
-        .catch(err => {
-          console.warn(err);
-          alert("Не получли статью");
-        })
-  }, [])
+    axios
+      .get(`/news/${id}`)
+      .then(({ data }) => {
+        setTitle(data.title);
+        setImageUrl(data.imageUrl);
+        setDescription(data.description);
+        setSummary(data.summary);
+      })
+      .catch((err) => {
+        console.warn(err);
+        alert("Не получли статью");
+      });
+  }, []);
 
   return (
     <>
@@ -105,14 +102,17 @@ export default function EditNews() {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
-            <input 
-              className="dateInput" 
-              type="date" 
+            <input
+              className="dateInput"
+              type="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
             />
             <div className="bottomButtons">
-              <button className="createAdminBtn" onClick={onSubmit}> Сохранить </button>
+              <button className="createAdminBtn" onClick={onSubmit}>
+                {" "}
+                Сохранить{" "}
+              </button>
               <Link to={"/main/news"}>
                 <button className="cancelAdminBtn"> Отменить </button>
               </Link>

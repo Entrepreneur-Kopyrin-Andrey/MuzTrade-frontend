@@ -1,41 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { fetchDeleteNews } from "../../redux/slices/news";
 
-
 export default function NewsCardAdmin({ src, date, summary, id, title }) {
-
   const dispatch = useDispatch();
-  
+
   const onClickDelete = (id) => {
-    if(window.confirm("Хотите удалить новость?"))
-    {
-      dispatch(fetchDeleteNews(id))
+    if (window.confirm("Хотите удалить новость?")) {
+      dispatch(fetchDeleteNews(id));
     }
-  }
+  };
 
   const [data, setData] = React.useState({
-    title: '',
-    description: '',
-    src: ''
+    title: "",
+    description: "",
+    src: "",
   });
 
-    React.useEffect(() => {
-        setData({
-            title: title,
-            date: date,
-            summary: summary,
-            src: src
-        })
-    }, [])
-
+  React.useEffect(() => {
+    setData({
+      title: title,
+      date: date,
+      summary: summary,
+      src: src,
+    });
+  }, []);
 
   return (
     <>
       <div className="cardWrapper">
         <div className="newsImage">
-          <img src={"http://localhost:4444" + src} alt="news" className="image" />
+          <img
+            src={"http://localhost:4444" + src}
+            alt="news"
+            className="image"
+          />
         </div>
         <div className="data"> {date} </div>
 
@@ -44,7 +44,10 @@ export default function NewsCardAdmin({ src, date, summary, id, title }) {
           <Link to={`/main/editnews/${id}`} state={{ data: data }}>
             <button className="edit"> Редактировать </button>
           </Link>
-          <button className="delete" onClick={() => onClickDelete(id)}> Удалить </button>
+          <button className="delete" onClick={() => onClickDelete(id)}>
+            {" "}
+            Удалить{" "}
+          </button>
         </div>
       </div>
     </>

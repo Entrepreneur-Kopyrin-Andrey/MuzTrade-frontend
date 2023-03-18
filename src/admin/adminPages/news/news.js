@@ -5,9 +5,6 @@ import del from "../../../assets/delete.svg";
 import { Link } from "react-router-dom";
 import Menu from "./../../adminComponents/menu";
 
-import { selectIsAuth } from "../../../redux/slices/auth";
-import { Navigate } from "react-router-dom";
-
 import { useDispatch, useSelector } from "react-redux";
 import { fetchNews } from "../../../redux/slices/news";
 
@@ -29,11 +26,6 @@ const News = () => {
     dispatch(fetchNews());
   }, []);
 
-  // const isAuth = useSelector(selectIsAuth);
-
-  // if (!isAuth) {
-  //   return <Navigate to="/" />;
-  // }
   return (
     <>
       <div className="wrapperNewsAdmin">

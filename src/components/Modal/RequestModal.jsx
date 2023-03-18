@@ -20,7 +20,7 @@ export default function RequestModal({ value, setValue }) {
 
   const [state, setState] = React.useState(initState);
 
-  const { values, isLoading, error } = state;
+  const { values, error } = state;
 
   const handleChange = ({ target }) =>
     setState((prev) => ({
@@ -34,7 +34,6 @@ export default function RequestModal({ value, setValue }) {
   const onSubmit = async () => {
     setState((prev) => ({
       ...prev,
-      // isLoading: true
     }));
     try {
       await sendContactForm(values);
@@ -42,7 +41,6 @@ export default function RequestModal({ value, setValue }) {
     } catch (error) {
       setState((prev) => ({
         ...prev,
-        // isLoading: true
         error: error.message,
       }));
     }
@@ -86,8 +84,6 @@ export default function RequestModal({ value, setValue }) {
               <p className="Monrat400">Введите номер телефона</p>
               <input
                 type="tel"
-                // с="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                // required
                 placeholder="xxx-xxx-xxx"
                 value={values.phone}
                 name="phone"
@@ -96,9 +92,7 @@ export default function RequestModal({ value, setValue }) {
             </div>
             <button
               className="requestContent__button request Monrat400 "
-              // disabled = {!value.name || !value.phone}
               onClick={onSubmit}
-              // isLoading={isLoading}
             >
               Оставить заявку
             </button>

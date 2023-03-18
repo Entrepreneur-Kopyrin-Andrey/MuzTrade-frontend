@@ -5,9 +5,7 @@ import light from '../assets/light.svg'
 import equipment from '../assets/equipment.svg'
 import file from '../assets/Price.pdf'
 
-
 export default function Equipment() {
-  
   return (
     <>
       <div className="equipment" id="equipment">
