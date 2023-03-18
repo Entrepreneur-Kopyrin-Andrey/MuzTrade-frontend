@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 
 export default function NewsCard() {
@@ -8,7 +8,7 @@ export default function NewsCard() {
 
     const data = location.state?.data;
 
-    console.log(data);
+    const navigate = useNavigate();
 
     return (
         <>
@@ -21,7 +21,7 @@ export default function NewsCard() {
                     width={210}
                     height={80}
                     />
-                    <a href="/"><button className="request">Вернуться</button></a>
+                    <button onClick={() => navigate(-1)} className="request">Вернуться</button>
                 </div>
             </header>
             <div className="newsCardPage">

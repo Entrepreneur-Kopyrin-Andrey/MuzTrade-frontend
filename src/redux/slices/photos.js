@@ -6,6 +6,11 @@ export const fetchPhotos = createAsyncThunk("photos/fetchPhotos", async () => {
   return data;
 });
 
+export const fetchDeletePhotos = createAsyncThunk(
+  "news/fetchDeletePhotos",
+  async (id) => axios.delete(`/photos/${id}`)
+);
+
 const initialState = {
     photos: {
         items: [],
@@ -31,6 +36,12 @@ const photosSlice = createSlice({
     [fetchPhotos.rejected]: (state) => {
       state.photos.items = [];
       state.photos.status = "error";
+    },
+
+    [fetchDeletePhotos.pending]: (state, action) => {
+      state.photos.items = state.photos.items.filter(
+        (obj) => obj._id !== action.meta.arg
+      );
     },
   },
 });

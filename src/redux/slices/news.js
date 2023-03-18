@@ -39,8 +39,8 @@ const newsSlice = createSlice({
     },
 
     [fetchDeleteNews.pending]: (state, action) => {
-      state.news.items = state.news.item.filter(
-        (obj) => obj._id !== action.payload
+      state.news.items = state.news.items.filter(
+        (obj) => obj._id !== action.meta.arg
       );
     },
   },

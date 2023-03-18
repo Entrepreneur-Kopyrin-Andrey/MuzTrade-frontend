@@ -20,11 +20,11 @@ export default function Gallery() {
       }, [])
   
 
-  const SlickArrowRight = () => (
-      <img className='slick-next slick-arrow' src={arrow} alt="arrow" width={145} height={145}/>
+  const SlickArrowRight = ({ className, style, onClick }) => (
+      <button><img onClick={onClick} className='slick-next slick-arrow' src={arrow} alt="arrow" width={145} height={145}/></button>
   );
-  const SlickArrowLeft = () => (
-      <img className='slick-prev slick-arrow' src={arrow} alt="arrow" width={145} height={145}/>
+  const SlickArrowLeft = ({ className, style, onClick }) => (
+    <button><img onClick={onClick} className='slick-prev slick-arrow' src={arrow} alt="arrow" width={145} height={145}/></button>
   );
 
   const { setValueSrc } = React.useContext(ValueContext)
@@ -38,7 +38,7 @@ export default function Gallery() {
   const settings = {
     dots: false,
     arrows: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,

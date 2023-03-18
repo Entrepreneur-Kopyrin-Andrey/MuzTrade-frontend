@@ -48,6 +48,7 @@ export default function NewsPage() {
                                 <>
                                   <NewsCard 
                                     key={idx} 
+                                    id={obj.id}
                                     title={obj.title} 
                                     src={obj.imageUrl}
                                     description={obj.description}

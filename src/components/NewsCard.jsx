@@ -8,6 +8,7 @@ export default function NewsCard({src, title, description}) {
         description: '',
         src: ''
     });
+
     React.useEffect(() => {
         setData({
             title: title,

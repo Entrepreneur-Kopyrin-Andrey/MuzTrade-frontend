@@ -38,11 +38,11 @@ const {news} = useSelector(state => state.news)
                          (news.items).filter((item, idx) => idx < 6).map((obj, index) => 
                             <NewsCard 
                                 key={index}
+                                id={obj.id}
                                 title={obj.title}
                                 src={obj.imageUrl}
                                 description={obj.description}
                             />
-
                          )
                       }
                   </div>

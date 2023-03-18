@@ -25,11 +25,12 @@
     
 
     &__container {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-content: stretch;
+      align-items: stretch;
       .newsCard {
-        width: 30%;
         text-align: center;
         margin-bottom: 80px;
         h3 {

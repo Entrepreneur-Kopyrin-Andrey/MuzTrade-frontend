@@ -100,6 +100,7 @@ const Photos = () => {
                 obj.summary.toLowerCase().includes(searchValue.toLowerCase())
               ).map((obj, index) => (
                 <PhotosCardAdmin
+                  id={obj._id}
                   src={obj.imageUrl}
                   date={obj.date}
                   summary={obj.summary}

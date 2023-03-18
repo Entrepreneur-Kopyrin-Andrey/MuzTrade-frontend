@@ -114,8 +114,8 @@ const News = () => {
                     src={obj.imageUrl}
                     summary={obj.summary}
                     date={obj.date}
-                    id={obj.id}
-
+                    title={obj.title}
+                    id={obj._id}
                   />
                 ))}
             </div>
