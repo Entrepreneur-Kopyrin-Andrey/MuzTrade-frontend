@@ -2,6 +2,7 @@ import React from "react";
 import upload from "../../../assets/upload.svg";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "../../../axios";
+import basket from "../../../assets/basket.svg";
 
 export default function EditNews() {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ export default function EditNews() {
 
   const uploadFile = React.useRef(null);
 
-  /*const handleChangeFile = async (event) => {
+  const handleChangeFile = async (event) => {
     try {
       const formData = new FormData();
       const file = event.target.files[0];
@@ -27,7 +28,7 @@ export default function EditNews() {
       console.warn(error);
       alert("Ошибка");
     }
-  };*/
+  };
 
   const onClickRemove = () => {
     setImageUrl("");
@@ -45,10 +46,10 @@ export default function EditNews() {
       };
       const { data } = await axios.patch(`/news/${id}`, fields);
       const _id = id;
-      navigate(`/news/${_id}`);
+      navigate(`/news`);
     } catch (error) {
       console.warn(error);
-      alert("Ошибка создания новости!");
+      alert("Ошибка редактирования новости!");
     }
   };
 
@@ -60,10 +61,12 @@ export default function EditNews() {
         setImageUrl(data.imageUrl);
         setDescription(data.description);
         setSummary(data.summary);
+        setDate(data.date);
+
       })
       .catch((err) => {
         console.warn(err);
-        alert("Не получли статью");
+        alert("Ошибка при получении новости!");
       });
   }, []);
 
@@ -73,7 +76,43 @@ export default function EditNews() {
         <h1>Редактирование новости</h1>
         <div className="createUp">
           <div className="upload">
-            <img src={upload} alt="search" width={120} height={120} />
+          {imageUrl ? (
+              <>
+                <div className="fileUpl">
+                  <img
+                    src={`http://localhost:4444${imageUrl}`}
+                    alt="Upload"
+                    className="uploadImg"
+                  />
+                  <button className="deleteImg">
+                    <img
+                      src={basket}
+                      alt="basket"
+                      width={50}
+                      height={50}
+                      onClick={onClickRemove}
+                    />
+                  </button>
+                </div>
+              </>
+            ) : (
+              <>
+                <img
+                  src={upload}
+                  alt="upload"
+                  width={120}
+                  height={120}
+                  onClick={() => uploadFile.current.click()}
+                />
+                <input
+                  type="file"
+                  ref={uploadFile}
+                  style={{ visibility: "hidden" }}
+                  onChange={handleChangeFile}
+                />
+                <p> Выберите файл из проводника для загрузки</p>
+              </>
+            )}
           </div>
           <textarea
             rows="10"
@@ -114,7 +153,7 @@ export default function EditNews() {
                 Сохранить{" "}
               </button>
               <Link to={"/main/news"}>
-                <button className="cancelAdminBtn"> Отменить </button>
+                <button className="cancelAdminBtn"> Выйти </button>
               </Link>
             </div>
           </form>

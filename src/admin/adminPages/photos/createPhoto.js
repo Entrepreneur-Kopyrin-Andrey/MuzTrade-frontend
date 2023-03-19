@@ -118,11 +118,9 @@ export default function CreatePhoto() {
               onChange={(e) => setDate(e.target.value)}
             />
           </form>
-
           <div className="bottomButtons_ph">
             <button className="createAdminBtn_ph" onClick={onSubmit}>
-              {" "}
-              Создать{" "}
+              Создать
             </button>
             <Link to={"/main/photos"}>
               <button className="cancelAdminBtn_ph"> Отменить </button>

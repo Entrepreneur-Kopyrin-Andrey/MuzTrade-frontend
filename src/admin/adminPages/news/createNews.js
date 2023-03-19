@@ -6,6 +6,7 @@ import basket from "../../../assets/basket.svg";
 import { useNavigate } from "react-router-dom";
 
 export default function CreateNews() {
+  const navigate = useNavigate();
   const [loading, setLoading] = React.useState(false);
   const [title, setTitle] = React.useState("");
 
@@ -44,13 +45,14 @@ export default function CreateNews() {
         imageUrl,
       };
       const { data } = await axios.post("/news", fields);
+      navigate(`/`);
+
     } catch (error) {
       console.warn(error);
       alert("Ошибка создания новости!");
     }
   };
 
-  // console.log({title, description, summary, date})
   return (
     <>
       <div className="createWrapper">
@@ -133,7 +135,7 @@ export default function CreateNews() {
                 Создать
               </button>
               <Link to={"/main/news"}>
-                <button className="cancelAdminBtn"> Отменить </button>
+                <button className="cancelAdminBtn"> Выйти </button>
               </Link>
             </div>
           </form>
