@@ -16,6 +16,8 @@ import { Navigate } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 
+import NotFound from "../components/NotFound";
+
 const AppRouter = () => {
 
   const dispatch = useDispatch();
@@ -30,18 +32,25 @@ const AppRouter = () => {
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/admin" element={<Auth />} />
+      <Route path="/newscard" element={<NewsCardPage />} />
+      <Route path="/news" element={<NewsPage />} />
+
+
+      {/* private */}
+
       <Route path="/main" element={<News />} />
       <Route path="/main/createnews" element={<CreateNews />} />
       <Route path="/main/createphoto" element={<CreatePhoto />} />
 
       <Route path="/main/editnews/:id" element={<EditNews />} />
-      <Route path="/main/editphoto" element={<EditPhoto />} />
+      <Route path="/main/editphoto/:id" element={<EditPhoto />} />
 
-      <Route path="/main/news" element={<News />} />
+      <Route path="/main/news" element={<News />} /> 
       <Route path="/main/photos" element={<Photos />} />
 
-      <Route path="/newscard" element={<NewsCardPage />} />
-      <Route path="/news" element={<NewsPage />} />
+
+      <Route path="*" element={<NotFound />} />
+
     </Routes>
   );
 };

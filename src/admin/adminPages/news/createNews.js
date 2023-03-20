@@ -3,10 +3,15 @@ import upload from "../../../assets/upload.svg";
 import { Link } from "react-router-dom";
 import axios from "../../../axios";
 import basket from "../../../assets/basket.svg";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
+import { selectIsAuth } from "../../../redux/slices/auth";
+import { useSelector } from "react-redux";
 
 export default function CreateNews() {
   const navigate = useNavigate();
+
+  const isAuth = useSelector(selectIsAuth);
+
   const [loading, setLoading] = React.useState(false);
   const [title, setTitle] = React.useState("");
 
@@ -46,12 +51,15 @@ export default function CreateNews() {
       };
       const { data } = await axios.post("/news", fields);
       navigate(`/`);
-
     } catch (error) {
       console.warn(error);
       alert("Ошибка создания новости!");
     }
   };
+
+  if (!isAuth) {
+    return <Navigate to="/admin" />;
+  }
 
   return (
     <>

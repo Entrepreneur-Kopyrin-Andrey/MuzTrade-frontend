@@ -46,7 +46,7 @@ export default function EditNews() {
       };
       const { data } = await axios.patch(`/news/${id}`, fields);
       const _id = id;
-      navigate(`/news`);
+      alert("Изменения сохранены");
     } catch (error) {
       console.warn(error);
       alert("Ошибка редактирования новости!");
@@ -62,7 +62,6 @@ export default function EditNews() {
         setDescription(data.description);
         setSummary(data.summary);
         setDate(data.date);
-
       })
       .catch((err) => {
         console.warn(err);
@@ -76,7 +75,7 @@ export default function EditNews() {
         <h1>Редактирование новости</h1>
         <div className="createUp">
           <div className="upload">
-          {imageUrl ? (
+            {imageUrl ? (
               <>
                 <div className="fileUpl">
                   <img

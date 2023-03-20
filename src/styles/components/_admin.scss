@@ -264,6 +264,7 @@
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 100px;
         grid-row-gap: 100px;
+        margin-bottom: 100px;
       }
     }
   }
@@ -290,9 +291,8 @@
     .upload {
       .fileUpl {
         position: relative;
-        
-        
-        .uploadImg{
+
+        .uploadImg {
           width: 475px;
           height: 335px;
         }
@@ -402,7 +402,7 @@
   .titleContainer_ph {
     display: flex;
     justify-content: space-between;
-    .titleInput_ph,
+
     .dateInput_ph {
       color: #171728;
       font-size: 18px;
@@ -415,35 +415,29 @@
         border-color: #0a839e;
       }
     }
-  }
-  .bottomButtons_ph {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 70px !important;
-    width: 50%;
-    margin: 0 auto;
+    .bottomButtons_ph {
+      display: flex;
+      justify-content: space-between;
+      width: 470px;
 
-    .createAdminBtn_ph {
-      font-size: 22px;
-      line-height: 131.9%;
-      border: 0;
-      cursor: pointer;
-      padding: 15px 30px;
-      text-align: center;
-      background: #0a839e;
-      border-radius: 33px;
-      color: #ffffff;
-    }
-    .cancelAdminBtn_ph {
-      font-size: 22px;
-      line-height: 131.9%;
-      border: 0;
-      cursor: pointer;
-      padding: 15px 30px;
-      text-align: center;
-      background: #ec1f27;
-      border-radius: 33px;
-      color: #ffffff;
+      .createAdminBtn_ph,
+      .cancelAdminBtn_ph {
+        border-radius: 33px;
+        color: #ffffff;
+        font-size: 22px;
+        line-height: 131.9%;
+        border: 0;
+        cursor: pointer;
+        padding: 15px 30px;
+        text-align: center;
+      }
+
+      .createAdminBtn_ph {
+        background: #0a839e;
+      }
+      .cancelAdminBtn_ph {
+        background: #ec1f27;
+      }
     }
   }
 }

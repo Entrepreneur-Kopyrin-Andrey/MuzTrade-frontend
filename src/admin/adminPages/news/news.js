@@ -4,12 +4,17 @@ import search from "../../../assets/search.svg";
 import del from "../../../assets/delete.svg";
 import { Link } from "react-router-dom";
 import Menu from "./../../adminComponents/menu";
+import { Navigate } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 import { fetchNews } from "../../../redux/slices/news";
 
+import { selectIsAuth } from "../../../redux/slices/auth";
+
 const News = () => {
   const [searchValue, setSearchValue] = React.useState("");
+
+  const isAuth = useSelector(selectIsAuth);
 
   const onChangeSearchInput = (e) => {
     setSearchValue(e.target.value);
@@ -25,6 +30,10 @@ const News = () => {
   React.useEffect(() => {
     dispatch(fetchNews());
   }, []);
+
+  if (!isAuth) {
+    return <Navigate to="/admin" />;
+  }
 
   return (
     <>

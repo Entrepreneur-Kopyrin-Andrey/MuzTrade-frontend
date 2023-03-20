@@ -657,7 +657,8 @@ footer {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 200px;
+  position: absolute;
   h2 {
     font-size: 80px;
     color: #3f3f3f;
@@ -695,54 +696,54 @@ footer {
   }
 }
 
-.newsCardHeader{
+.newsCardHeader {
   width: 100%;
   background-color: white;
-  .newsCardWrapper{
+  .newsCardWrapper {
     width: 90%;
     margin: 0 auto;
     display: flex;
     margin-top: 15px;
     justify-content: space-between;
-    button{
+    button {
       height: 60px;
     }
   }
 }
 
-.newsCardPage{
+.newsCardPage {
   padding-top: 100px;
   width: 800px;
   margin: 0 auto;
   text-align: center;
-  &__image{
-    img{
+  &__image {
+    img {
       width: 100%;
       height: 500px;
     }
   }
-  &__title{
-      font-size: 60px;
-      line-height: 73px;
+  &__title {
+    font-size: 60px;
+    line-height: 73px;
   }
-  &__text{
+  &__text {
     text-align: left;
     line-height: 35px;
   }
 }
-.backgroundPage{
-  background-color: #FFF !important; 
-  .newsPage{
+.backgroundPage {
+  background-color: #fff !important;
+  .newsPage {
     background-image: none !important;
   }
 }
-.newsPage__title{
+.newsPage__title {
   margin-top: 30px;
 }
-.newsPage__container{
+.newsPage__container {
   margin-top: 80px;
 }
 
-.none{
+.none {
   display: none;
 }

@@ -1,13 +1,16 @@
 import React from "react";
 import upload from "../../../assets/upload.svg";
-import { Link } from "react-router-dom";
 import axios from "../../../axios";
 import basket from "../../../assets/basket.svg";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate, Link } from "react-router-dom";
+import { selectIsAuth } from "../../../redux/slices/auth";
+import { useSelector } from "react-redux";
 
 export default function CreatePhoto() {
+  const navigate = useNavigate();
+  const isAuth = useSelector(selectIsAuth);
+
   const [loading, setLoading] = React.useState(false);
-  const [title, setTitle] = React.useState("");
 
   const [summary, setSummary] = React.useState("");
   const [date, setDate] = React.useState("");
@@ -36,17 +39,21 @@ export default function CreatePhoto() {
     try {
       setLoading(true);
       const fields = {
-        title,
         summary,
         date,
         imageUrl,
       };
       const { data } = await axios.post("/photos", fields);
+      // navigate(`/news`);
     } catch (error) {
       console.warn(error);
       alert("Ошибка создания картинки!");
     }
   };
+
+  if (!isAuth) {
+    return <Navigate to="/admin" />;
+  }
 
   return (
     <>
@@ -105,27 +112,20 @@ export default function CreatePhoto() {
         <div className="createBottom_ph">
           <form className="titleContainer_ph">
             <input
-              className="titleInput_ph"
-              type="text"
-              placeholder="Введите название"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-            />
-            <input
               className="dateInput_ph"
               type="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
             />
+            <div className="bottomButtons_ph">
+              <button className="createAdminBtn_ph" onClick={onSubmit}>
+                Создать
+              </button>
+              <Link to={"/main/photos"}>
+                <button className="cancelAdminBtn_ph"> Выйти </button>
+              </Link>
+            </div>
           </form>
-          <div className="bottomButtons_ph">
-            <button className="createAdminBtn_ph" onClick={onSubmit}>
-              Создать
-            </button>
-            <Link to={"/main/photos"}>
-              <button className="cancelAdminBtn_ph"> Отменить </button>
-            </Link>
-          </div>
         </div>
       </div>
     </>
