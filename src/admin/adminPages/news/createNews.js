@@ -142,7 +142,7 @@ export default function CreateNews() {
               <button className="createAdminBtn" onClick={onSubmit}>
                 Создать
               </button>
-              <Link to={"/main/news"}>
+              <Link to={"/news"}>
                 <button className="cancelAdminBtn"> Выйти </button>
               </Link>
             </div>

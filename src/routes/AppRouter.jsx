@@ -19,38 +19,33 @@ import { useDispatch, useSelector } from "react-redux";
 import NotFound from "../components/NotFound";
 
 const AppRouter = () => {
-
   const dispatch = useDispatch();
   const isAuth = useSelector(selectIsAuth);
 
   React.useEffect(() => {
-    dispatch(fetchAuthUser())
-
-  }, [])
+    dispatch(fetchAuthUser());
+  }, []);
 
   return (
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/admin" element={<Auth />} />
-      <Route path="/newscard" element={<NewsCardPage />} />
-      <Route path="/news" element={<NewsPage />} />
 
+      <Route path="/newscard" element={<NewsCardPage />} />
+      <Route path="/newspage" element={<NewsPage />} />
 
       {/* private */}
 
-      <Route path="/main" element={<News />} />
-      <Route path="/main/createnews" element={<CreateNews />} />
-      <Route path="/main/createphoto" element={<CreatePhoto />} />
+      <Route path="/news" element={<News />} />
+      <Route path="/photos" element={<Photos />} />
 
-      <Route path="/main/editnews/:id" element={<EditNews />} />
-      <Route path="/main/editphoto/:id" element={<EditPhoto />} />
+      <Route path="/createnews" element={<CreateNews />} />
+      <Route path="/createphoto" element={<CreatePhoto />} />
 
-      <Route path="/main/news" element={<News />} /> 
-      <Route path="/main/photos" element={<Photos />} />
-
+      <Route path="/editnews/:id" element={<EditNews />} />
+      <Route path="/editphoto/:id" element={<EditPhoto />} />
 
       <Route path="*" element={<NotFound />} />
-
     </Routes>
   );
 };

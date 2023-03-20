@@ -1,10 +1,15 @@
 import React from "react";
 import upload from "../../../assets/upload.svg";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, useParams, useNavigate, Navigate } from "react-router-dom";
 import axios from "../../../axios";
 import basket from "../../../assets/basket.svg";
+import { useDispatch, useSelector } from "react-redux";
+
+import { selectIsAuth } from "../../../redux/slices/auth";
 
 export default function EditNews() {
+  const isAuth = useSelector(selectIsAuth);
+
   const navigate = useNavigate();
   const { id } = useParams();
   const [loading, setLoading] = React.useState(false);
@@ -69,6 +74,9 @@ export default function EditNews() {
       });
   }, []);
 
+  if (!isAuth) {
+    return <Navigate to="/admin" />;
+  }
   return (
     <>
       <div className="createWrapper">
@@ -148,10 +156,9 @@ export default function EditNews() {
             />
             <div className="bottomButtons">
               <button className="createAdminBtn" onClick={onSubmit}>
-                {" "}
-                Сохранить{" "}
+                Сохранить
               </button>
-              <Link to={"/main/news"}>
+              <Link to={"/news"}>
                 <button className="cancelAdminBtn"> Выйти </button>
               </Link>
             </div>

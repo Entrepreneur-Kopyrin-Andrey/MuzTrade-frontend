@@ -41,12 +41,11 @@ export default function NewsCardAdmin({ src, date, summary, id, title }) {
 
         <div className="summary">{summary}</div>
         <div className="adminButtons">
-          <Link to={`/main/editnews/${id}`} state={{ data: data }}>
+          <Link to={`/editnews/${id}`} state={{ data: data }}>
             <button className="edit"> Редактировать </button>
           </Link>
           <button className="delete" onClick={() => onClickDelete(id)}>
-            {" "}
-            Удалить{" "}
+            Удалить
           </button>
         </div>
       </div>

@@ -3,13 +3,18 @@ import PhotosCardAdmin from "../../adminComponents/photosCardAdmin";
 import search from "../../../assets/search.svg";
 import del from "../../../assets/delete.svg";
 import Menu from "./../../adminComponents/menu";
-import { Link } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPhotos } from "../../../redux/slices/photos";
 
+import { selectIsAuth } from "../../../redux/slices/auth";
+
+import { Navigate, Link } from "react-router-dom";
+
 const Photos = () => {
   const [searchValue, setSearchValue] = React.useState("");
+
+  const isAuth = useSelector(selectIsAuth);
 
   const onChangeSearchInput = (e) => {
     setSearchValue(e.target.value);
@@ -25,6 +30,10 @@ const Photos = () => {
   React.useEffect(() => {
     dispatch(fetchPhotos());
   }, []);
+
+  if (!isAuth) {
+    return <Navigate to="/admin" />;
+  }
 
   return (
     <>
@@ -89,23 +98,25 @@ const Photos = () => {
                   stroke-linejoin="round"
                 />
               </svg>
-              <Link to={"/main/createphoto"}>
+              <Link to={"/createphoto"}>
                 <p> Создать картинку </p>
               </Link>
             </div>
           </div>
           <div className="container">
             <div className="content">
-              {(photos.items).filter((obj) =>
-                obj.summary.toLowerCase().includes(searchValue.toLowerCase())
-              ).map((obj, index) => (
-                <PhotosCardAdmin
-                  id={obj._id}
-                  src={obj.imageUrl}
-                  date={obj.date}
-                  summary={obj.summary}
-                />
-              ))}
+              {photos.items
+                .filter((obj) =>
+                  obj.summary.toLowerCase().includes(searchValue.toLowerCase())
+                )
+                .map((obj, index) => (
+                  <PhotosCardAdmin
+                    id={obj._id}
+                    src={obj.imageUrl}
+                    date={obj.date}
+                    summary={obj.summary}
+                  />
+                ))}
             </div>
           </div>
         </div>

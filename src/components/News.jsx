@@ -34,11 +34,11 @@ export default function News() {
                   src={obj.imageUrl}
                   description={obj.description}
                   date={obj.date}
-                  summary={obj.date}
+                  summary={obj.summary}
                 />
               ))}
           </div>
-          <a href={"/news"}>
+          <a href={"/newspage"}>
             <button className="news__button request Monrat400">
               Смотреть все новости
             </button>

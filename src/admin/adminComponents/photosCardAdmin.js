@@ -39,12 +39,11 @@ export default function PhotosCardAdmin({ id, src, date, summary }) {
         <div className="data"> {date} </div>
         <div className="summary">{summary}</div>
         <div className="adminButtons">
-          <Link to={`/main/editphoto/${id}`} state={{ data: data }}>
+          <Link to={`/editphoto/${id}`} state={{ data: data }}>
             <button className="edit"> Редактировать </button>
           </Link>
           <button className="delete" onClick={() => onClickDelete(id)}>
-            {" "}
-            Удалить{" "}
+            Удалить
           </button>
         </div>
       </div>

@@ -121,7 +121,7 @@ export default function CreatePhoto() {
               <button className="createAdminBtn_ph" onClick={onSubmit}>
                 Создать
               </button>
-              <Link to={"/main/photos"}>
+              <Link to={"/photos"}>
                 <button className="cancelAdminBtn_ph"> Выйти </button>
               </Link>
             </div>

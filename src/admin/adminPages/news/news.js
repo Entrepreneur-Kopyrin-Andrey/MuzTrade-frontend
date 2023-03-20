@@ -2,9 +2,8 @@ import React from "react";
 import NewsCardAdmin from "../../adminComponents/newsCardAdmin";
 import search from "../../../assets/search.svg";
 import del from "../../../assets/delete.svg";
-import { Link } from "react-router-dom";
 import Menu from "./../../adminComponents/menu";
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 import { fetchNews } from "../../../redux/slices/news";
@@ -97,7 +96,7 @@ const News = () => {
                   stroke-linejoin="round"
                 />
               </svg>
-              <Link to={"/main/createnews"}>
+              <Link to={"/createnews"}>
                 <p> Создать новость </p>
               </Link>
             </div>

@@ -39,7 +39,7 @@ export default function Admin() {
   };
 
   if (isAuth) {
-    return <Navigate to="/main" />;
+    return <Navigate to="/news" />;
   }
 
   console.log("isAuth", isAuth);

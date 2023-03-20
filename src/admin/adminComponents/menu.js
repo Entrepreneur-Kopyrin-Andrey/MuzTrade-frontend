@@ -17,7 +17,7 @@ export default function Menu() {
         <ul>
           <li>
             <NavLink
-              to={"/main/news"}
+              to={"/news"}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               Новости
@@ -26,7 +26,7 @@ export default function Menu() {
 
           <li>
             <NavLink
-              to={"/main/photos"}
+              to={"/photos"}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               Картинки

@@ -5,6 +5,7 @@ header {
   position: fixed;
   z-index: 100;
   width: 100%;
+
   .wrapper {
     width: 80%;
     margin: 0 auto;
@@ -41,6 +42,11 @@ header {
               font-size: 14px;
             }
           }
+        }
+      }
+      @media (max-width: 760px) {
+        ul {
+          display: none;
         }
       }
     }
@@ -121,6 +127,16 @@ header {
       .request {
         padding: 11px 20px;
         font-size: 14px;
+      }
+    }
+    @media (max-width: 760px) {
+      a {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        img{
+          width: 200px;
+        }
       }
     }
   }
@@ -651,17 +667,49 @@ footer {
   }
 }
 
-.error {
+.notFoundWrapper {
   width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 200px;
   position: absolute;
+  .notFoundImg {
+    width: 590px;
+    height: 325px;
+  }
   h2 {
     font-size: 80px;
     color: #3f3f3f;
+  }
+  @media (max-width: 660px) {
+    .notFoundImg {
+      width: 430px;
+      height: 280px;
+    }
+    h2 {
+      font-size: 65px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .notFoundImg {
+      width: 280px;
+      height: 140px;
+    }
+    h2 {
+      font-size: 50px;
+    }
+  }
+  @media (max-width: 280px) {
+    .notFoundImg {
+      width: 240px;
+      height: 100px;
+    }
+    h2 {
+      font-size: 35px;
+    }
   }
 }
 

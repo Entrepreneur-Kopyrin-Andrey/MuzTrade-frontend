@@ -1,10 +1,16 @@
 import React from "react";
 import upload from "../../../assets/upload.svg";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, useParams, useNavigate, Navigate } from "react-router-dom";
 import axios from "../../../axios";
 import basket from "../../../assets/basket.svg";
 
+import { useDispatch, useSelector } from "react-redux";
+
+import { selectIsAuth } from "../../../redux/slices/auth";
+
 export default function EditPhoto() {
+  const isAuth = useSelector(selectIsAuth);
+
   const navigate = useNavigate();
   const { id } = useParams();
   const [loading, setLoading] = React.useState(false);
@@ -62,6 +68,10 @@ export default function EditPhoto() {
         alert("Ошибка при получении новости!");
       });
   }, []);
+
+  if (!isAuth) {
+    return <Navigate to="/admin" />;
+  }
 
   return (
     <>
@@ -128,7 +138,7 @@ export default function EditPhoto() {
               <button className="createAdminBtn_ph" onClick={onSubmit} ы>
                 Сохранить
               </button>
-              <Link to={"/main/photos"}>
+              <Link to={"/photos"}>
                 <button className="cancelAdminBtn_ph"> Выйти </button>
               </Link>
             </div>

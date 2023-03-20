@@ -1,48 +1,54 @@
-import React from 'react'
-import MobileNewsCard from './MobileNewsCard'
-import stars from '../../assets/stars.svg'
-import line from '../../assets/line.svg'
-import news from '../../assets/news/news.svg'
-import news1 from '../../assets/news/news1.svg'
-import news2 from '../../assets/news/news2.svg'
+import React from "react";
+import MobileNewsCard from "./MobileNewsCard";
+import stars from "../../assets/stars.svg";
+import line from "../../assets/line.svg";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchNews } from "../../redux/slices/news";
 
 export default function MobileNews() {
-    return (
-      <>
+  const dispatch = useDispatch();
+  const { news } = useSelector((state) => state.news);
+
+  React.useEffect(() => {
+    dispatch(fetchNews());
+  }, []);
+
+  return (
+    <>
       <div className="background" id="news">
         <div className="news">
           <div className="container news">
             <div className="news__header">
-              <img
-                  src={stars}
-                  alt="about"
-                  width={250}
-                  height={30}
-              />
-              <h2 className="news__title Neucha400">Новости нашей <br /> компании</h2>
-              <img
-                  src={line}
-                  alt="about"
-                  width={114}
-                  height={5}
-              />
-              <p className='Monrat400'>Мероприятия, в которых мы участвовали</p>
+              <img src={stars} alt="about" width={250} height={30} />
+              <h2 className="news__title Neucha400">
+                Новости нашей <br /> компании
+              </h2>
+              <img src={line} alt="about" width={114} height={5} />
+              <p className="Monrat400">Мероприятия, в которых мы участвовали</p>
             </div>
             <div className="news__container">
-                <MobileNewsCard src={news}></MobileNewsCard>
-                <MobileNewsCard src={news1}></MobileNewsCard>
-                <MobileNewsCard src={news2}></MobileNewsCard>
-                <MobileNewsCard src={news2}></MobileNewsCard>
-                <MobileNewsCard src={news1}></MobileNewsCard>
-                <MobileNewsCard src={news}></MobileNewsCard>
+              {news.items
+                .filter((item, idx) => idx < 6)
+                .map((obj, index) => (
+                  <MobileNewsCard
+                    key={index}
+                    id={obj.id}
+                    title={obj.title}
+                    src={obj.imageUrl}
+                    description={obj.description}
+                    date={obj.date}
+                    summary={obj.summary}
+                  />
+                ))}
             </div>
-            <button className="news__button request Monrat400">Смотреть все новости</button>
+            <a href={"/newspage"}>
+              <button className="news__button request Monrat400">
+                Смотреть все новости
+              </button>
+            </a>
+          </div>
         </div>
       </div>
-      </div>
-      </>
-    );
-  }
-
-
-  
+    </>
+  );
+}

@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import "./styles/index.scss";
-import logo from "./assets/logo.svg";
 
 import About from "./components/About";
 import News from "./components/News";
@@ -9,8 +8,6 @@ import Gallery from "./components/Gallery";
 import Equipment from "./components/Equipment";
 import Contacts from "./components/Contacts";
 import Main from "./components/Main";
-// import { MainLayout } from "@/layout/MainLayout";
-// import { MobileLayout } from "@/layout/MobileLayout";
 import useWindowSize from "./hooks/useWindowSize";
 import MobileAbout from "./components/MobileComponents/MobileAbout";
 import MobileNews from "./components/MobileComponents/MobileNews";
@@ -21,33 +18,32 @@ import MobileContacts from "./components/MobileComponents/MobileContacts";
 import { ValueContext } from "./hooks/context";
 
 import { Header } from "./components/Header";
-import  MobileHeader  from "./components/MobileComponents/MobileHeader";
+import MobileHeader from "./components/MobileComponents/MobileHeader";
 import Footer from "./components/Footer";
 import PortfolioButton from "./components/PortfolioButton";
-import RequestModal from './components/Modal/RequestModal';
-import ImageModal from './components/Modal/ImageModal';
-import MobileMenu from './components/Modal/MobileMenu';
-
+import RequestModal from "./components/Modal/RequestModal";
+import ImageModal from "./components/Modal/ImageModal";
+import MobileMenu from "./components/Modal/MobileMenu";
 
 function App() {
   const [width, height] = useWindowSize();
   const [valueSrc, setValueSrc] = React.useState("");
   const [modalValue, setModalValue] = React.useState(true);
   const [requestModalValue, setRequestModalValue] = React.useState(false);
-  
+
   const [menuValue, setMenuValue] = React.useState(false);
 
   const handleMenuChange = (value) => {
-    setMenuValue(value)
-  }
+    setMenuValue(value);
+  };
 
   const handleRequestChange = (value) => {
-    setRequestModalValue(value)
-  }
+    setRequestModalValue(value);
+  };
 
   const modalClose = (value) => {
-    setModalValue(value)
-  }
+    setModalValue(value);
+  };
   return (
     <>
       <ValueContext.Provider
@@ -62,11 +58,11 @@ function App() {
       >
         {width > 1024 ? (
           <>
-            <Header  onChange={handleRequestChange}/>
+            <Header onChange={handleRequestChange} />
             <PortfolioButton />
             <Main />
             <About />
-            <News /> 
+            <News />
             <Gallery />
             <Equipment />
             <Contacts />
@@ -74,18 +70,25 @@ function App() {
           </>
         ) : (
           <>
-            <MobileHeader onChange={handleMenuChange}/>
+            <MobileHeader onChange={handleMenuChange} />
             <MobileMain />
             <MobileAbout />
             <MobileNews />
-            <MobileGallery/>
-            <MobileEquipment/>
+            <MobileGallery />
+            <MobileEquipment />
             <MobileContacts />
           </>
         )}
-        <MobileMenu setValue={setMenuValue} value={menuValue}></MobileMenu> 
-        { requestModalValue && <RequestModal setValue={setRequestModalValue} value={requestModalValue}></RequestModal> }
-        { modalValue && valueSrc && <ImageModal modalClose={modalClose} valueSrc={valueSrc}></ImageModal>}
+        <MobileMenu setValue={setMenuValue} value={menuValue}></MobileMenu>
+        {requestModalValue && (
+          <RequestModal
+            setValue={setRequestModalValue}
+            value={requestModalValue}
+          ></RequestModal>
+        )}
+        {modalValue && valueSrc && (
+          <ImageModal modalClose={modalClose} valueSrc={valueSrc}></ImageModal>
+        )}
       </ValueContext.Provider>
     </>
   );
