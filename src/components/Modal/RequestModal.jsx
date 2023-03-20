@@ -2,20 +2,22 @@ import React from "react";
 import { sendContactForm } from '../../lib/api';
 import close from '../../assets/close.svg'
 
-const initValues = {
-  name: "",
-  phone: "",
-};
-
-const initState = {
-  values: initValues,
-};
 
 export default function RequestModal({ value, setValue }) {
   const handleModalClick = (event) => {
     if (event.target.dataset.layout) {
       setValue(false);
     }
+  };
+  
+  
+  const initValues = {
+    name: "",
+    phone: "",
+  };
+  
+  const initState = {
+    values: initValues,
   };
 
   const [state, setState] = React.useState(initState);
@@ -65,11 +67,11 @@ export default function RequestModal({ value, setValue }) {
             <h3 className="requestContent__undertitle Monrat400">
               и мы с вами свяжемся
             </h3>
-            {
+            {/*
               error && (
                 <p className="failed Monrat500"> {error} </p>
               ) 
-            }
+              */}
             <div className="requestContent__name">
               <p className="Monrat400">Введите имя</p>
               <input
