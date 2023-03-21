@@ -30,9 +30,10 @@ const News = () => {
     dispatch(fetchNews());
   }, []);
 
-  if (!isAuth) {
-    return <Navigate to="/admin" />;
-  }
+  // if (!isAuth) {
+  //   return <Navigate to="/admin" />;
+  // }
+
 
   return (
     <>

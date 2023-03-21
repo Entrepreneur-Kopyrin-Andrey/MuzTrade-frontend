@@ -47,8 +47,8 @@ export default function EditPhoto() {
       };
       const { data } = await axios.patch(`/photos/${id}`, fields);
       const _id = id;
-      // navigate(`/news`);
       alert("Изменения сохранены");
+      navigate(`/photos/${id}`);
     } catch (error) {
       console.warn(error);
       alert("Ошибка редактирования картинки!");
@@ -69,9 +69,9 @@ export default function EditPhoto() {
       });
   }, []);
 
-  if (!isAuth) {
-    return <Navigate to="/admin" />;
-  }
+  // if (!isAuth) {
+  //   return <Navigate to="/admin" />;
+  // }
 
   return (
     <>

@@ -1,20 +1,22 @@
 import React from "react";
 import upload from "../../../assets/upload.svg";
-import { Link, useParams, useNavigate, Navigate } from "react-router-dom";
+import { Link, useParams, useNavigate, Navigate, useLocation } from "react-router-dom";
 import axios from "../../../axios";
 import basket from "../../../assets/basket.svg";
 import { useDispatch, useSelector } from "react-redux";
 
+
 import { selectIsAuth } from "../../../redux/slices/auth";
 
 export default function EditNews() {
-  const isAuth = useSelector(selectIsAuth);
-
   const navigate = useNavigate();
+  const location = useLocation()
   const { id } = useParams();
   const [loading, setLoading] = React.useState(false);
 
-  const [title, setTitle] = React.useState("");
+  const fromPage = location.state?.from?.pathname;
+
+    const [title, setTitle] = React.useState("");
   const [description, setDescription] = React.useState("");
   const [summary, setSummary] = React.useState("");
   const [date, setDate] = React.useState("");
@@ -52,6 +54,8 @@ export default function EditNews() {
       const { data } = await axios.patch(`/news/${id}`, fields);
       const _id = id;
       alert("Изменения сохранены");
+      navigate("/news");
+      // navigate('/news', {replace: true} )
     } catch (error) {
       console.warn(error);
       alert("Ошибка редактирования новости!");
@@ -74,9 +78,6 @@ export default function EditNews() {
       });
   }, []);
 
-  if (!isAuth) {
-    return <Navigate to="/admin" />;
-  }
   return (
     <>
       <div className="createWrapper">

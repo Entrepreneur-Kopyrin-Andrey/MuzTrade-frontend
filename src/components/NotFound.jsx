@@ -40,8 +40,6 @@ const NotFound = () => {
           className="notFoundImg"
           src={notFound}
           alt="404"
-          width={593}
-          height={324}
         />
         <h2>ОШИБКА</h2>
       </div>

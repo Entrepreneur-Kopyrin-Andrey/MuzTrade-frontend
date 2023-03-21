@@ -44,16 +44,16 @@ export default function CreatePhoto() {
         imageUrl,
       };
       const { data } = await axios.post("/photos", fields);
-      // navigate(`/news`);
+      navigate(`/photos`);
     } catch (error) {
       console.warn(error);
       alert("Ошибка создания картинки!");
     }
   };
 
-  if (!isAuth) {
-    return <Navigate to="/admin" />;
-  }
+  // if (!isAuth) {
+  //   return <Navigate to="/admin" />;
+  // }
 
   return (
     <>

@@ -2,13 +2,14 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { fetchAuth, selectIsAuth } from "../redux/slices/auth";
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export default function Admin() {
   const [show, setShow] = React.useState(false);
   const handleShow = () => {
     setShow(!show);
   };
+  const navigate = useNavigate();
 
   const {
     register,
@@ -28,6 +29,8 @@ export default function Admin() {
 
   const onSubmit = async (values) => {
     const data = await dispatch(fetchAuth(values));
+    console.log(data.payload.token)
+    
 
     if (!data.payload) {
       alert("Не удалось авторизоваться!");
@@ -38,11 +41,13 @@ export default function Admin() {
     }
   };
 
+
+
   if (isAuth) {
     return <Navigate to="/news" />;
   }
 
-  console.log("isAuth", isAuth);
+  // console.log("isAuth", isAuth);
 
   return (
     <>
@@ -87,7 +92,7 @@ export default function Admin() {
             </div>
 
             <div className="auth_bottom">
-              <button type="submit" className="button">
+              <button type="submit" className="button" >
                 Войти
               </button>
             </div>

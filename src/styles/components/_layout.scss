@@ -43,6 +43,11 @@ header {
           }
         }
       }
+      @media (max-width: 760px) {
+        ul {
+          display: none;
+        }
+      }
     }
     .number {
       font-size: 20px;
@@ -121,6 +126,16 @@ header {
       .request {
         padding: 11px 20px;
         font-size: 14px;
+      }
+    }
+    @media (max-width: 760px) {
+      a {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        img {
+          width: 200px;
+        }
       }
     }
   }
@@ -240,8 +255,7 @@ header {
         width: 140px;
       }
       .menu {
-
-width: 35px;
+        width: 35px;
         height: 40px;
       }
     }
@@ -485,7 +499,7 @@ footer {
         .number {
           a {
             font-size: 13px;
-}
+          }
           img {
             width: 20px;
           }
@@ -652,17 +666,51 @@ footer {
   }
 }
 
-.error {
+.notFoundWrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 150px;
+  height: 100vh;
+  .notFoundImg {
+    width: 590px;
+    height: 325px;
+  }
   h2 {
     font-size: 80px;
     color: #3f3f3f;
   }
+  @media (max-width: 660px) {
+    .notFoundImg {
+      width: 430px;
+      height: 280px;
+    }
+    h2 {
+      font-size: 65px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .notFoundImg {
+      width: 280px;
+      height: 140px;
+    }
+    h2 {
+      font-size: 50px;
+    }
+  }
+  @media (max-width: 280px) {
+    .notFoundImg {
+      width: 240px;
+      height: 100px;
+    }
+    h2 {
+      font-size: 35px;
+    }
+  }
+
+
 }
 
 .buttonWrapper {
@@ -696,54 +744,54 @@ footer {
   }
 }
 
-.newsCardHeader{
+.newsCardHeader {
   width: 100%;
   background-color: white;
-  .newsCardWrapper{
+  .newsCardWrapper {
     width: 90%;
     margin: 0 auto;
     display: flex;
     margin-top: 15px;
     justify-content: space-between;
-    button{
+    button {
       height: 60px;
     }
   }
 }
 
-.newsCardPage{
+.newsCardPage {
   padding-top: 100px;
   width: 800px;
   margin: 0 auto;
   text-align: center;
-  &__image{
-    img{
+  &__image {
+    img {
       width: 100%;
       height: 500px;
     }
   }
-  &__title{
-      font-size: 60px;
-      line-height: 73px;
+  &__title {
+    font-size: 60px;
+    line-height: 73px;
   }
-  &__text{
+  &__text {
     text-align: left;
     line-height: 35px;
   }
 }
-.backgroundPage{
-  background-color: #FFF !important; 
-  .newsPage{
+.backgroundPage {
+  background-color: #fff !important;
+  .newsPage {
     background-image: none !important;
   }
 }
-.newsPage__title{
+.newsPage__title {
   margin-top: 30px;
 }
-.newsPage__container{
+.newsPage__container {
   margin-top: 80px;
 }
 
-.none{
+.none {
   display: none;
 }

@@ -31,9 +31,9 @@ const Photos = () => {
     dispatch(fetchPhotos());
   }, []);
 
-  if (!isAuth) {
-    return <Navigate to="/admin" />;
-  }
+  // if (!isAuth) {
+  //   return <Navigate to="/admin" />;
+  // }
 
   return (
     <>

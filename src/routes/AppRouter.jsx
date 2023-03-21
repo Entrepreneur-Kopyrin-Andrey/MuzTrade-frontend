@@ -14,6 +14,8 @@ import NewsPage from "../components/NewsPage";
 import { fetchAuthUser, selectIsAuth } from "../redux/slices/auth";
 import { Navigate } from "react-router-dom";
 
+import WithAuth from "../hoc/WithAuth";
+
 import { useDispatch, useSelector } from "react-redux";
 
 import NotFound from "../components/NotFound";
@@ -36,14 +38,56 @@ const AppRouter = () => {
 
       {/* private */}
 
-      <Route path="/news" element={<News />} />
-      <Route path="/photos" element={<Photos />} />
+      <Route
+        path="/news"
+        element={
+          <WithAuth>
+            <News />
+          </WithAuth>
+        }
+      />
+      <Route
+        path="/photos"
+        element={
+          <WithAuth>
+            <Photos />
+          </WithAuth>
+        }
+      />
 
-      <Route path="/createnews" element={<CreateNews />} />
-      <Route path="/createphoto" element={<CreatePhoto />} />
+      <Route
+        path="/createnews"
+        element={
+          <WithAuth>
+            <CreateNews />
+          </WithAuth>
+        }
+      />
+      <Route
+        path="/createphoto"
+        element={
+          <WithAuth>
+            <CreatePhoto />
+          </WithAuth>
+        }
+      />
 
-      <Route path="/editnews/:id" element={<EditNews />} />
-      <Route path="/editphoto/:id" element={<EditPhoto />} />
+      <Route
+        path="/editnews/:id"
+        element={
+          <WithAuth>
+            <EditNews />
+          </WithAuth>
+        }
+      />
+      <Route
+        path="/editphoto/:id"
+        element={
+          <WithAuth>
+            <EditPhoto />
+          </WithAuth>
+        }
+      />
 
       <Route path="*" element={<NotFound />} />
     </Routes>

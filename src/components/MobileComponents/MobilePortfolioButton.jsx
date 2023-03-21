@@ -1,5 +1,5 @@
 import React from "react";
-import mobile_folder from '../../assets/mobile_folder.svg'
+import mobile_folder from '../../assets/mobile/mobile_folder.svg'
 
 export default function MobilePortfolioButton() {
   return (

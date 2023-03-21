@@ -50,16 +50,16 @@ export default function CreateNews() {
         imageUrl,
       };
       const { data } = await axios.post("/news", fields);
-      navigate(`/`);
+      navigate(`/news`);
     } catch (error) {
       console.warn(error);
       alert("Ошибка создания новости!");
     }
   };
 
-  if (!isAuth) {
-    return <Navigate to="/admin" />;
-  }
+  // if (!isAuth) {
+  //   return <Navigate to="/admin" />;
+  // }
 
   return (
     <>
