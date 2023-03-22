@@ -28,6 +28,7 @@ import MobilePortfolioButton from "./components/MobileComponents/MobilePortfolio
 import RequestModal from './components/Modal/RequestModal';
 import ImageModal from './components/Modal/ImageModal';
 import MobileMenu from './components/Modal/MobileMenu';
+import MobileFooter from './components/MobileComponents/MobileFooter';
 
 
 function App() {
@@ -83,6 +84,7 @@ function App() {
             <MobileGallery/>
             <MobileEquipment/>
             <MobileContacts />
+            <MobileFooter />
           </>
         )}
         <MobileMenu setValue={setMenuValue} value={menuValue}></MobileMenu> 
