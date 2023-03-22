@@ -7,7 +7,6 @@ import close from '../../assets/close.svg'
 
 export default function ModalVideo() {
    
-
   return (
     <div className="video" >
          <div className="closeVideo" ><img src={close} alt="close" width={31} height={34}></img></div>

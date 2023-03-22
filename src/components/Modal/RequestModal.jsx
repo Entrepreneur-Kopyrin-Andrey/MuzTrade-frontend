@@ -1,6 +1,7 @@
 import React from "react";
 import { sendContactForm } from '../../lib/api';
 import close from '../../assets/close.svg'
+import { Link } from 'react-router-dom';
 
 
 export default function RequestModal({ value, setValue }) {
@@ -33,9 +34,16 @@ export default function RequestModal({ value, setValue }) {
       },
     }));
 
+    const handleLink = () =>{
+      setValue(false);
+    }
+
   const onSubmit = async () => {
     setState((prev) => ({
       ...prev,
+      name: '',
+      phone: '',
+      
     }));
     try {
       await sendContactForm(values);
@@ -102,8 +110,10 @@ export default function RequestModal({ value, setValue }) {
               Нажимая на кнопку, Вы принимаете Положение и Согласие на обработку
               персональных данных.
             </p>
-            <p className="requestContent__more Monrat400">
-              Заполнить подробнее
+            <p className="requestContent__more Monrat400" onClick={()=>handleLink()}>
+              <Link to={"/requestpage"}>
+                Заполнить подробнее
+              </Link>
             </p>
           </div>
         </div>

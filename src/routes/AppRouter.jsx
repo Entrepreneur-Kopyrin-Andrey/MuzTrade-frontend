@@ -10,6 +10,7 @@ import CreateNews from "../admin/adminPages/news/createNews";
 import CreatePhoto from "../admin/adminPages/photos/createPhoto";
 import NewsCardPage from "../components/NewsCardPage";
 import NewsPage from "../components/NewsPage";
+import RequestPage from "../components/RequestPage";
 
 import { fetchAuthUser, selectIsAuth } from "../redux/slices/auth";
 import { Navigate } from "react-router-dom";
@@ -35,6 +36,7 @@ const AppRouter = () => {
 
       <Route path="/newscard" element={<NewsCardPage />} />
       <Route path="/newspage" element={<NewsPage />} />
+      <Route path="/requestpage" element={<RequestPage />} />
 
       {/* private */}
 

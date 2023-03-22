@@ -247,8 +247,8 @@
       }
       .plus {
         position: absolute;
-        right: 100px;
-        top: 57%;
+        right: 90px;
+        top: 75%;
       }
       .circleBtn {
         width: 200px;
@@ -898,21 +898,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 30;
+  z-index: 302;
   
   .closeVideo{
     position: absolute;
-      right: 10%;
-      top: 14%;
+    right: 10%;
+    top: 10%;
       cursor: pointer;
   }
   .videoContent{
-    height: 694px;
-    width: 1234px;
-
+    width: 70%;
+    height: 70%;
   }
 }
-
+@media (max-width: 1024px) {
+  .video{
+    .closeVideo{
+      position: absolute;
+        right: 10%;
+        top: 17%;
+        cursor: pointer;
+    }
+    .videoContent{
+      margin-top: 150px;
+      width: 80%;
+    }
+  }
+}
 @media (max-width: 1024px) {
   .main{
     

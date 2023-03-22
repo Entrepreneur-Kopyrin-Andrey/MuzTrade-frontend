@@ -7,6 +7,7 @@ import main2 from '../../assets/main2.svg'
 import plus from '../../assets/plus.svg'
 import button from '../../assets/button.svg'
 import play from '../../assets/play.svg'
+import { Link } from 'react-router-dom';
 
 export default function MobileMain() {
 
@@ -18,10 +19,10 @@ export default function MobileMain() {
         <div className='main' id='main'>
           <div className="container mainWrapper mainWrapper__mobile">
             <div className="leftSide">
-
-
-            <h1>Прокат сценического оборудования</h1>
-            <button onClick={() => setRequestModalValue(true)} className="request">Оставить заявку</button>
+              <h1>Прокат сценического оборудования</h1>
+              <Link to="requestpage">
+                <button className="request">Оставить заявку</button>
+              </Link>
             </div>
 
             <div className="rightSide">

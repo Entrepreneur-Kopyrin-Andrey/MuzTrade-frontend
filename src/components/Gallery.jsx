@@ -53,7 +53,7 @@ export default function Gallery() {
               {(photos.items).map((obj, index) => {
                  return(
                       <div key={index} className="img__link" onClick={() => handleImage(obj.imageUrl)}>
-                        <img src={'http://localhost:4444' + obj.imageUrl} alt={obj.date} width={516} height={385} s/>
+                        <img src={'http://localhost:4444' + obj.imageUrl} alt={obj.date}/>
                         <span className="img__mask">
                             <h4>{obj.date}</h4>
                             <p>{obj.summary}</p>

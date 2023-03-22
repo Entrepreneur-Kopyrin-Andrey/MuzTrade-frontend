@@ -29,11 +29,11 @@ export default function MobileNewsCard({
         </div>
         <h3 className="newsCard__title Monrat700">{date}</h3>
         <p className="newsCard__text Monrat400"> {summary} </p>
-        <Link to={"/newscard"} state={{ data: data }}>
           <button className="newsCard__button request Monrat400">
-            Читать дальше
+            <Link to={"/newscard"} state={{ data: data }}>
+              Читать дальше
+            </Link>
           </button>
-        </Link>
       </div>
     </>
   );

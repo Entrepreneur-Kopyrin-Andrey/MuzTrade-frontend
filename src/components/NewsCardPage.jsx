@@ -1,6 +1,7 @@
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import logo from '../assets/logo.svg'
+import NewPageHeader from './NewPageHeader';
 
 export default function NewsCard() {
 
@@ -12,18 +13,7 @@ export default function NewsCard() {
 
     return (
         <>
-            <header className="newsCardHeader">
-                <div className="newsCardWrapper">
-                    <img
-                    src={logo}
-                    className="logo"
-                    alt="logo"
-                    width={210}
-                    height={80}
-                    />
-                    <button onClick={() => navigate(-1)} className="request">Вернуться</button>
-                </div>
-            </header>
+             <NewPageHeader />
             <div className="newsCardPage">
                 <h3 className="newsCardPage__title Monrat500">{data.title}</h3>
                 <div className="newsCardPage__image">
