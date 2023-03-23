@@ -1,7 +1,5 @@
 import React from "react";
-import "./App.css";
 import "./styles/index.scss";
-import logo from "./assets/logo.svg";
 
 import About from "./components/About";
 import News from "./components/News";
@@ -9,8 +7,6 @@ import Gallery from "./components/Gallery";
 import Equipment from "./components/Equipment";
 import Contacts from "./components/Contacts";
 import Main from "./components/Main";
-// import { MainLayout } from "@/layout/MainLayout";
-// import { MobileLayout } from "@/layout/MobileLayout";
 import useWindowSize from "./hooks/useWindowSize";
 import MobileAbout from "./components/MobileComponents/MobileAbout";
 import MobileNews from "./components/MobileComponents/MobileNews";

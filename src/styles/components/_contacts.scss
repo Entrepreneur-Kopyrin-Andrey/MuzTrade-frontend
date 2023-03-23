@@ -1,5 +1,7 @@
 .contacts {
   width: auto;
+  padding-top: 10px;
+
   &__header {
     margin-top: 94px;
     text-align: center;
@@ -59,8 +61,6 @@
   }
   .connections {
     margin-left: 85px;
-    &__title {
-    }
     &__text {
       margin-top: 55px;
       }
@@ -130,8 +130,6 @@
     }
     .connections {
       margin-left: 45px;
-      &__title {
-      }
       &__text {
         margin-top: 15px;
         }
@@ -351,11 +349,6 @@
           }
         }
       }
-      &__phone{}
-      &__email{}
-      &__address{}
-      &__contactFace{}
-      &__timetable{}
     }
     &__p{
       margin-top: 29px;
@@ -367,9 +360,7 @@
       display: flex;
       justify-content: left;
       margin-bottom: 72px;
-      img{
-
-      }
+      
     }
     @media (max-width: 475px) {
       &__p{
@@ -379,9 +370,6 @@
       }
       .connections__vk{
         margin-bottom: 52px;
-        img{
-  
-        }
       }
     }
     @media (max-width: 375px) {

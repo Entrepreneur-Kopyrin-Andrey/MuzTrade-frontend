@@ -1,7 +1,7 @@
 .background {
   background-color: #F4F4F4;
   height: auto;
-  padding-top: 60px;
+  padding-top: 30px;
   width: auto;
   .news {
     background-image: url("../../assets/guitar.svg");
@@ -200,8 +200,7 @@
         &__header{
           text-align: center;
           padding-top: 75px;
-          h2{
-          }
+          
         }
         @media (max-width: 840px) {
           &__header{

@@ -12,18 +12,15 @@ import NewsCardPage from "../components/NewsCardPage";
 import NewsPage from "../components/NewsPage";
 import RequestPage from "../components/RequestPage";
 
-import { fetchAuthUser, selectIsAuth } from "../redux/slices/auth";
-import { Navigate } from "react-router-dom";
-
+import { fetchAuthUser } from "../redux/slices/auth";
 import WithAuth from "../hoc/WithAuth";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import NotFound from "../components/NotFound";
 
 const AppRouter = () => {
   const dispatch = useDispatch();
-  const isAuth = useSelector(selectIsAuth);
 
   React.useEffect(() => {
     dispatch(fetchAuthUser());

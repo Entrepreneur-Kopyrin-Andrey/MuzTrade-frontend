@@ -80,3 +80,10 @@ line-height: 120px;
     transition: 250ms;
   }
 }
+
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}

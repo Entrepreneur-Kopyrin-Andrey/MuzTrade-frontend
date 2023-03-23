@@ -3,9 +3,12 @@ import { sendContactForm } from '../lib/api';
 import NewPageHeader from './NewPageHeader';
 import Select from 'react-select'
 import uploadfile from '../assets/uploadfile.svg'
+import { loadReCaptcha } from 'react-recaptcha-google'
+import { ReCaptcha } from 'react-recaptcha-google'
 
 export default function RequestPage() {
 
+  {/*
   const [fileState, setFileState] = React.useState(false);
   const [fileUrl, setFileUrl] = React.useState('');
 
@@ -23,10 +26,14 @@ export default function RequestPage() {
     setFileState(true)
     values.file = file;
   }
+  */}
 
     const onChangeService = (newValue) => {
         values.service = newValue.label;
     }
+    React.useEffect(()=>{
+      loadReCaptcha();
+    }, [])
 
 const options = [
   { value: 'video', label: 'Видеосъемка' },
@@ -49,11 +56,14 @@ const initValues = {
   
   const initState = {
     values: initValues,
+    err: '',
   };
 
   const [state, setState] = React.useState(initState);
 
-  const { values, error } = state;
+  const { values, err } = state;
+
+
 
   const handleChange = ({ target }) =>
     setState((prev) => ({
@@ -67,22 +77,28 @@ const initValues = {
   const onSubmit = async () => {
     setState((prev) => ({
         ...prev,
+    }));
+    try {
+      await sendContactForm(values);
+    } catch (error) {
+      setState((prev) => ({
+        ...prev,
+        err: error.message,
+      }));
+      console.log(error.message)
+    }
+    setState((prev) => ({
+      ...prev,
+      values: {
+        ...prev.values,
         name: "",
         email: "",
         phone: "",
         theme: "",
         service: "",
         comment: "",
-    }));
-    try {
-      await sendContactForm(values);
-      
-    } catch (error) {
-      setState((prev) => ({
-        ...prev,
-        error: error.message,
-      }));
-    }
+      },
+  }));
   };
 
   return (
@@ -140,6 +156,7 @@ const initValues = {
                     <p className="Monrat400">Вид услуги</p>
                     <Select classNamePrefix="custom-select" className="custom-select" options={options} placeholder={'Выберите...'} isSearchable={false} onChange={onChangeService}/>
                 </div>
+                {/* 
                 <div className="requestContentPage__file">
                 <p className="Monrat400">Загрузить файл технического задания и другое</p>
                 <div className="input__file"> 
@@ -153,6 +170,7 @@ const initValues = {
                     </label>
                 </div>
                 </div>
+                */}
                 <div className="requestContentPage__textarea">
                 <p className="Monrat400">Оставьте комментарий с более подробной информацией</p>
                 <textarea
@@ -169,6 +187,8 @@ const initValues = {
                 >
                 Оставить заявку
                 </button>
+                {err ? <p className="success_files">Успешно</p> : <p>{err}</p>}
+                {console.log(err)}
             </div>
         </div>
     </>
