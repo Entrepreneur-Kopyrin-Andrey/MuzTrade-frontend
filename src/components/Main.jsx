@@ -7,6 +7,8 @@ import main2 from '../assets/main2.svg'
 import button from '../assets/button.svg'
 import play from '../assets/play.svg'
 import plus from '../assets/plus.svg'
+import main from '../assets/main.png'
+
 
 
 export default function Main() {
@@ -31,7 +33,7 @@ export default function Main() {
               height={200}
             />
 
-            <img
+            {/* <img
               className="main1"
               src={main1}
               alt="main1"
@@ -45,6 +47,14 @@ export default function Main() {
               alt="main2"
               width={396}
               height={384}
+            /> */}
+
+<img
+              className="main"
+              src={main}
+              alt="main"
+              width={864}
+              height={880}
             />
             <img
               className="plus"
