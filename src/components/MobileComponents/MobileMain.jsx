@@ -1,17 +1,14 @@
 import React from 'react'
 import ModalVideo from "../Modal/ModalVideo.jsx";
-import { ValueContext } from '../../hooks/context';
 import waves from '../../assets/waves.svg'
-import main1 from '../../assets/main1.svg'
-import main2 from '../../assets/main2.svg'
 import plus from '../../assets/plus.svg'
 import button from '../../assets/button.svg'
 import play from '../../assets/play.svg'
 import { Link } from 'react-router-dom';
+import main from '../../assets/main.png'
 
 export default function MobileMain() {
 
-  const { requestModalValue, setRequestModalValue } = React.useContext(ValueContext);
   const [modalActive, setModalActive] = React.useState(false);
 
     return (
@@ -33,7 +30,7 @@ export default function MobileMain() {
               width={179}
               height={200}
             />
-
+            {/*
             <img
               className="main1"
               src={main1}
@@ -48,6 +45,11 @@ export default function MobileMain() {
               alt="main2"
               width={396}
               height={384}
+            />*/}
+            <img
+              className="main"
+              src={main}
+              alt="main"
             />
             <img
               className="plus"

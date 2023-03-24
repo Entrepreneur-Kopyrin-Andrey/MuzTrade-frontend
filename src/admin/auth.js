@@ -2,20 +2,18 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { fetchAuth, selectIsAuth } from "../redux/slices/auth";
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 export default function Admin() {
   const [show, setShow] = React.useState(false);
   const handleShow = () => {
     setShow(!show);
   };
-  const navigate = useNavigate();
 
   const {
     register,
     handleSubmit,
-    setError,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm({
     defaultValues: {
       login: "",

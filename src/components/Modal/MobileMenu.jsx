@@ -20,7 +20,7 @@ export default function MobileMenu({ value, setValue }) {
           <img src={menuClose} alt="" width={31} height={34}></img>
         </div>
           <div className="menuContent">
-            <a href={"#"}>
+            <a href={"/"}>
                 <p className="menuContent__p" data-layout>Главная</p>
             </a>
             <a href={"#about"}>

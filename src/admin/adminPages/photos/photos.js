@@ -7,14 +7,10 @@ import Menu from "./../../adminComponents/menu";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPhotos } from "../../../redux/slices/photos";
 
-import { selectIsAuth } from "../../../redux/slices/auth";
-
-import { Navigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Photos = () => {
   const [searchValue, setSearchValue] = React.useState("");
-
-  const isAuth = useSelector(selectIsAuth);
 
   const onChangeSearchInput = (e) => {
     setSearchValue(e.target.value);

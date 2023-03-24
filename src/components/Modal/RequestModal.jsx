@@ -11,7 +11,6 @@ export default function RequestModal({ value, setValue }) {
     }
   };
   
-  
   const initValues = {
     name: "",
     phone: "",
@@ -19,11 +18,11 @@ export default function RequestModal({ value, setValue }) {
   
   const initState = {
     values: initValues,
+    err: '',
   };
 
   const [state, setState] = React.useState(initState);
-
-  const { values, error } = state;
+  const { values, err } = state;
 
   const handleChange = ({ target }) =>
     setState((prev) => ({
@@ -51,7 +50,7 @@ export default function RequestModal({ value, setValue }) {
     } catch (error) {
       setState((prev) => ({
         ...prev,
-        error: error.message,
+        err: error.message,
       }));
     }
   };

@@ -16,7 +16,7 @@ export const Header = ({ onChange }) => {
           <nav>
             <ul>
               <a href={"/"}>
-                <li>Главная </li>
+                <li className="Monrat400">Главная </li>
               </a>
 
               <a href={"#about"}>

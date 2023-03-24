@@ -2,8 +2,6 @@ import React from "react";
 import ModalVideo from "./Modal/ModalVideo.jsx";
 import { ValueContext } from './../hooks/context';
 import waves from '../assets/waves.svg'
-import main1 from '../assets/main1.svg'
-import main2 from '../assets/main2.svg'
 import button from '../assets/button.svg'
 import play from '../assets/play.svg'
 import plus from '../assets/plus.svg'
@@ -13,7 +11,7 @@ import main from '../assets/main.png'
 
 export default function Main() {
   const [modalActive, setModalActive] = React.useState(false);
-  const { requestModalValue, setRequestModalValue } = React.useContext(ValueContext)
+  const { setRequestModalValue } = React.useContext(ValueContext)
 
   return (
     <>
@@ -49,7 +47,7 @@ export default function Main() {
               height={384}
             /> */}
 
-<img
+            <img
               className="main"
               src={main}
               alt="main"

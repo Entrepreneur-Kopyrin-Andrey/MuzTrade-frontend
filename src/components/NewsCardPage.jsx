@@ -1,15 +1,11 @@
 import React from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
-import logo from '../assets/logo.svg'
+import { useLocation } from 'react-router-dom'
 import NewPageHeader from './NewPageHeader';
 
 export default function NewsCard() {
 
     const location = useLocation();
-
     const data = location.state?.data;
-
-    const navigate = useNavigate();
 
     return (
         <>

@@ -3,17 +3,14 @@ import NewsCardAdmin from "../../adminComponents/newsCardAdmin";
 import search from "../../../assets/search.svg";
 import del from "../../../assets/delete.svg";
 import Menu from "./../../adminComponents/menu";
-import { Navigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 import { fetchNews } from "../../../redux/slices/news";
 
-import { selectIsAuth } from "../../../redux/slices/auth";
 
 const News = () => {
   const [searchValue, setSearchValue] = React.useState("");
-
-  const isAuth = useSelector(selectIsAuth);
 
   const onChangeSearchInput = (e) => {
     setSearchValue(e.target.value);

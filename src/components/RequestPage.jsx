@@ -2,13 +2,12 @@ import React from "react";
 import { sendContactForm } from '../lib/api';
 import NewPageHeader from './NewPageHeader';
 import Select from 'react-select'
-import uploadfile from '../assets/uploadfile.svg'
 import { loadReCaptcha } from 'react-recaptcha-google'
-import { ReCaptcha } from 'react-recaptcha-google'
+//import { ReCaptcha } from 'react-recaptcha-google'
 
 export default function RequestPage() {
 
-  {/*
+  /*
   const [fileState, setFileState] = React.useState(false);
   const [fileUrl, setFileUrl] = React.useState('');
 
@@ -26,26 +25,27 @@ export default function RequestPage() {
     setFileState(true)
     values.file = file;
   }
-  */}
-
-    const onChangeService = (newValue) => {
-        values.service = newValue.label;
-    }
-    React.useEffect(()=>{
-      loadReCaptcha();
-    }, [])
-
-const options = [
-  { value: 'video', label: 'Видеосъемка' },
-  { value: 'sound', label: 'Звуковое оборудование' },
-  { value: 'backline', label: 'Бэклайн' },
-  { value: 'event', label: 'Event-услуги' },
-  { value: 'decoration', label: 'Декорации' },
-  { value: '3d', label: '3D-визуализация' },
-  { value: 'light', label: 'Световое оборудование' },
-]
-
-const initValues = {
+  */ 
+  
+  const onChangeService = (newValue) => {
+    values.service = newValue.label;
+    setServiceValue(newValue)
+  }
+  React.useEffect(()=>{
+    loadReCaptcha();
+  }, [])
+  
+  const options = [
+    { value: 'video', label: 'Видеосъемка' },
+    { value: 'sound', label: 'Звуковое оборудование' },
+    { value: 'backline', label: 'Бэклайн' },
+    { value: 'event', label: 'Event-услуги' },
+    { value: 'decoration', label: 'Декорации' },
+    { value: '3d', label: '3D-визуализация' },
+    { value: 'light', label: 'Световое оборудование' },
+  ]
+  
+  const initValues = {
     name: "",
     email: "",
     phone: "",
@@ -58,47 +58,52 @@ const initValues = {
     values: initValues,
     err: '',
   };
-
+  
   const [state, setState] = React.useState(initState);
-
+  
   const { values, err } = state;
-
-
-
+  
+  const label = React.useRef();
+  const placeholder = 'Выберите...';
+  const [serviceValue, setServiceValue] = React.useState(placeholder);
+  
   const handleChange = ({ target }) =>
-    setState((prev) => ({
-      ...prev,
-      values: {
-        ...prev.values,
-        [target.name]: target.value,
-      },
-    }));
-
+  setState((prev) => ({
+    ...prev,
+    values: {
+      ...prev.values,
+      [target.name]: target.value,
+    },
+  }));
+  
+  const [errState, setErrState] = React.useState(false);
+  
   const onSubmit = async () => {
     setState((prev) => ({
-        ...prev,
+      ...prev,
     }));
     try {
+      setErrState(true);
+      setState((prev) => ({
+        ...prev,
+        values: {
+          ...prev.values,
+          name: "",
+          email: "",
+          phone: "",
+          theme: "",
+          service: "",
+          comment: "",
+        },
+      }));
+      setServiceValue(null)
       await sendContactForm(values);
     } catch (error) {
       setState((prev) => ({
         ...prev,
         err: error.message,
       }));
-      console.log(error.message)
     }
-    setState((prev) => ({
-      ...prev,
-      values: {
-        ...prev.values,
-        name: "",
-        email: "",
-        phone: "",
-        theme: "",
-        service: "",
-        comment: "",
-      },
-  }));
   };
 
   return (
@@ -154,7 +159,7 @@ const initValues = {
                 </div>
                 <div className="requestContentPage__service">
                     <p className="Monrat400">Вид услуги</p>
-                    <Select classNamePrefix="custom-select" className="custom-select" options={options} placeholder={'Выберите...'} isSearchable={false} onChange={onChangeService}/>
+                    <Select classNamePrefix="custom-select" className="custom-select" options={options} value={serviceValue} ref={label} placeholder={placeholder} isSearchable={false} onChange={onChangeService}/>
                 </div>
                 {/* 
                 <div className="requestContentPage__file">
@@ -181,14 +186,14 @@ const initValues = {
                     onChange={handleChange}
                 />
                 </div>
+                {!errState ? '' : <p className="success_files">Успешно</p>}
+                {err ? <p className="unsuccess_files">Упс...что-то пошло не так, попробуйте снова или позвоните нам по телефону на главной странице!</p> : ''}
                 <button
                 className="requestContentPage__button request Monrat400 "
                 onClick={onSubmit}
                 >
                 Оставить заявку
                 </button>
-                {err ? <p className="success_files">Успешно</p> : <p>{err}</p>}
-                {console.log(err)}
             </div>
         </div>
     </>
