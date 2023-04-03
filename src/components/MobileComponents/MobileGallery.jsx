@@ -31,7 +31,7 @@ export default function MobileGallery() {
               return (
                 <div key={index} className="img__link" onClick={() => handleImage(obj.imageUrl)}>
                   <img
-                    src={"http://localhost:4444" + obj.imageUrl}
+                    src={"https://api.muztrade.com:4444" + obj.imageUrl}
                     alt={obj.date}
                     width={516}
                     height={385}

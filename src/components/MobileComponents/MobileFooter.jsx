@@ -22,7 +22,7 @@ export default function MobileFooter() {
               8 (815) 242-43-73
             </a>
           </div>
-          <Link href={"https://vk.com/muztrade51"} className="vk">
+          <Link href={"https://vk.com/muztrade"} className="vk">
             <img
               className="vk"
               src={vk}
@@ -33,6 +33,7 @@ export default function MobileFooter() {
           </Link>
         </div>
       </div>
+      <p className="copyright">© 2023 Все права защищены</p>
     </footer>
   );
 }

@@ -90,10 +90,10 @@ export default function RequestModal({ value, setValue }) {
               />
             </div>
             <div className="requestContent__phone">
-              <p className="Monrat400">Введите номер телефона</p>
+              <p className="Monrat400">Введите номер телефона*</p>
               <input
                 type="tel"
-                placeholder="xxx-xxx-xxx"
+                placeholder="Введите номер телефона"
                 value={values.phone}
                 name="phone"
                 onChange={handleChange}

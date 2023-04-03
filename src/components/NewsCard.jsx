@@ -21,7 +21,7 @@ export default function NewsCard({ src, title, description, date, summary }) {
       <div className="newsCard">
         <div className="newsCard__image">
           <img
-            src={"http://localhost:4444" + src}
+            src={"https://api.muztrade.com:4444" + src}
             alt="newscard"
             width={485}
             height={268}

@@ -31,25 +31,22 @@ export default function Contacts() {
               <p className="connections__title Monrat700">Свяжитесь с нами</p>
               <div className="connections__text connection">
                 <p className="connection__phone ">
-                  <span className="Monrat500">Телефон:</span> <a className="Monrat500" href="tel:+78152424373">8 815 242 43 73</a> 
+                  <span className="Monrat500">Телефон:</span> <a className="redhover Monrat500" href="tel:+78152424373">8 (815) 242 43 73</a> 
                 </p>
                 <p className="connection__email">
-                  <span className="Monrat500">E-mail:</span> <a className="Monrat500" href="mailto:ager@muztrade.com">ager@muztrade.com</a> 
+                  <span className="Monrat500">E-mail:</span> <a className="redhover Monrat500" href="mailto:manager@muztrade.com">manager@muztrade.com</a> 
                 </p>
                 <p className="connection__address Monrat500">
                   Мурманск, Рыбный проезд, д.8
                 </p>
-                <p className="connection__contactFace Monrat500">
-                  <span className="Monrat500">Контактное лицо:</span>
-                </p>
                 <p className="connection__timetable Monrat500">
-                  <span className="Monrat500">График работы:</span> Пн - Пт с 12:00 до 20:00
+                  <span className="Monrat500">График работы:</span><br /> Пн - Пт с 12:00 до 20:00
                   <br />
                   Сб - Вс с 12:00 до 18:00
                 </p>
               </div>
               <p className="connections__p Monrat500">Мы в соц.сетях:</p>
-              <a href="https://vk.com/muztrade51">
+              <a href="https://vk.com/muztrade">
                 <img
                   className="connections__vk"
                   src={vk}

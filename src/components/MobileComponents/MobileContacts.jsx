@@ -29,7 +29,7 @@ export default function MobileContacts() {
             <span className="Monrat500">Телефон:</span> <a className="Monrat500" href="tel:+78152424373">8 815 242 43 73</a> 
           </p>
           <p className="connection__email">
-            <span className="Monrat500">E-mail:</span> <a className="Monrat500" href="mailto:ager@muztrade.com">ager@muztrade.com</a> 
+            <span className="Monrat500">E-mail:</span> <a className="Monrat500" href="mailto:manager@muztrade.com">manager@muztrade.com</a> 
           </p>
           <p className="connection__address Monrat500">
             Мурманск, Рыбный проезд, д.8
@@ -44,7 +44,7 @@ export default function MobileContacts() {
           </p>
         </div>
         <p className='contacts__p Monrat500'>Мы в соц.сетях:</p>
-        <a href={"https://vk.com/muztrade51"} className="connections__vk">
+        <a href={"https://vk.com/muztrade"} className="connections__vk">
                 <img
                   src={vk}
                   alt="vk"

@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/logo.svg";
 import phone from "../assets/phone.svg";
+import { Link } from 'react-router-dom';
 
 export const Header = ({ onChange }) => {
   const handleChange = () => {
@@ -11,8 +12,9 @@ export const Header = ({ onChange }) => {
     <>
       <header>
         <div className="wrapper">
-          <img src={logo} alt="" />
-
+          <Link to={'/'}>
+            <img className="wrapper-logo" src={logo} alt="" />
+          </Link>
           <nav>
             <ul>
               <a href={"/"}>
@@ -23,7 +25,7 @@ export const Header = ({ onChange }) => {
                 <li className="Monrat400"> О нас</li>
               </a>
               <a href={"#news"}>
-                <li className="Monrat400"> Новость</li>
+                <li className="Monrat400"> Новости</li>
               </a>
               <a href={"#gallery"}>
                 <li className="Monrat400">Галерея</li>
@@ -39,7 +41,7 @@ export const Header = ({ onChange }) => {
 
           <div className="number">
             <img src={phone} alt="phone" width={25} height={25} />
-            <a href="tel:+78152424373" className="phoneNumber Monrat400">
+            <a href="tel:+78152424373" className="phoneNumber Monrat400 redhover">
               8 (815) 242-43-73
             </a>
           </div>

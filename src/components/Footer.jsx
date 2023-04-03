@@ -16,11 +16,11 @@ export default function Footer() {
         <div className="cont">
           <div className="number">
             <img src={phone} alt="phone" width={25} height={25} />
-            <a href="tel:+78152424373" className="phoneNumber">
+            <a href="tel:+78152424373" className="redhover phoneNumber">
               8 (815) 242-43-73
             </a>
           </div>
-          <a href={"https://vk.com/muztrade51"}>
+          <a href={"https://vk.com/muztrade"}>
             <img
               className="vk"
               src={vk}
@@ -31,6 +31,7 @@ export default function Footer() {
           </a>
         </div>
       </div>
+      <p className="copyright">© 2023 Все права защищены</p>
     </footer>
   );
 }

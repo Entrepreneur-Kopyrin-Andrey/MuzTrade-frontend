@@ -2,8 +2,12 @@ import React from 'react'
 import galka from '../assets/galka.svg'
 import phone from '../assets/phone.svg'
 import about from '../assets/about.svg'
+import { ValueContext } from './../hooks/context';
 
 export default function About() {
+
+  const { setRequestModalValue } = React.useContext(ValueContext)
+
     return (
       <>
         <div className='about' id='about'>
@@ -26,10 +30,10 @@ export default function About() {
                 </ul>
             </div>
             <div className="about__posttitle postTitle">
-              <p className="postTitle__text Monrat700">Оставьте <span className='redline'>заявку</span> или позвоните по контактному номеру</p>
+              <p className="postTitle__text Monrat700">Оставьте <span onClick={() => setRequestModalValue(true)} className='redline redhover'>заявку</span> или позвоните по контактному номеру</p>
               <div className="postTitle__phone">
                 <img src={phone} alt="phone" width={25} height={25} />
-                <span className="phone redline"> <a className='Monrat700' href="tel:+78152424373">8 (815) 242-43-73</a></span>
+                <span className="phone redline"> <a className='redhover Monrat700' href="tel:+78152424373">8 (815) 242-43-73</a></span>
               </div>
             </div>
           </div>

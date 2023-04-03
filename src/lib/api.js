@@ -1,5 +1,5 @@
 export const sendContactForm = async (data) =>
-  fetch("http://localhost:4444/send", {
+  fetch("http://62.109.6.71:4444/send", {
     method: "POST",
     body: JSON.stringify(data),
     headers: { "Content-Type": "application/json", Accept: "application/json" },

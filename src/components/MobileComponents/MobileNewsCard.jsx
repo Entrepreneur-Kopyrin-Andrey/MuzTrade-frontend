@@ -25,15 +25,15 @@ export default function MobileNewsCard({
     <>
       <div className="newsCard">
         <div className="newsCard__image">
-          <img src={src} alt="newscard" width={385} height={268} />
+          <img src={"https://api.muztrade.com:4444" + src} alt="newscard" width={385} height={268} />
         </div>
         <h3 className="newsCard__title Monrat700">{date}</h3>
         <p className="newsCard__text Monrat400"> {summary} </p>
-          <button className="newsCard__button request Monrat400">
-            <Link to={"/newscard"} state={{ data: data }}>
+          <Link to={"/newscard"} state={{ data: data }}>
+            <button className="newsCard__button request Monrat400">
               Читать дальше
-            </Link>
-          </button>
+            </button>
+          </Link>
       </div>
     </>
   );

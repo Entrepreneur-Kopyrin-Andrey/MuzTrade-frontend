@@ -81,9 +81,31 @@ line-height: 120px;
   }
 }
 
+.wrapper-logo{
+  cursor: pointer;
+}
+.copyright{
+  text-align: center;
+  margin-top: -15px;
+  padding-bottom: 35px;
+}
+@media (max-width: 1024px) {
+  .copyright{
+    font-size: 18px;
+  }
+}
+@media (max-width: 460px) {
+  .copyright{
+    font-size: 14px;
+  }
+}
 
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
   }
+}
+
+.redhover:hover{
+  color: #ec1f27 !important;
 }

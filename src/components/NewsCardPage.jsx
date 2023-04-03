@@ -14,7 +14,7 @@ export default function NewsCard() {
                 <h3 className="newsCardPage__title Monrat500">{data.title}</h3>
                 <div className="newsCardPage__image">
                     <img
-                        src={'http://localhost:4444' + data.src}
+                        src={'https://api.muztrade.com:4444' + data.src}
                         alt="newscard"
                         width={485}
                         height={268}

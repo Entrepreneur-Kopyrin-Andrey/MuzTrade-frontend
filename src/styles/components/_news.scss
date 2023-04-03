@@ -220,7 +220,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 370px;
+            height: 520px;
             text-align: center;
             margin-bottom: 55px;
             &__image{
@@ -306,8 +306,6 @@
             }
             button{
               display: block;
-              position: absolute;
-              bottom: 0;
             }
             
           }
@@ -316,7 +314,7 @@
               width: 80%;
               text-align: center;
               margin-bottom: 55px;
-              height: 370px;
+              height: 480px;
               &__image{
                 margin: 0px;
                 img{
@@ -336,8 +334,17 @@
               }
             }
           }
+          @media (max-width: 630px) {
+            .newsCard {
+              width: 80%;
+              text-align: center;
+              margin-bottom: 55px;
+              height: 520px;
+            }
+          }
           @media (max-width: 475px) {
             .newsCard {
+              height: 470px;
               h3{
                 font-size: 22px;
               }
@@ -351,7 +358,7 @@
           }
           @media (max-width: 375px) {
             .newsCard {
-              height: 320px;
+              height: 400px;
               h3{
                 font-size: 19px;
                 margin-top: 10px;
