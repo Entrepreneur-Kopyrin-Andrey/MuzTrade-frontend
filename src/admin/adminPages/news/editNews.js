@@ -88,7 +88,7 @@ export default function EditNews() {
               <>
                 <div className="fileUpl">
                   <img
-                    src={`https://api.muztrade.com:4444 + ${imageUrl}`}
+                    src={'https://api.muztrade.com:4444' + imageUrl}
                     alt="Upload"
                     className="uploadImg"
                   />
