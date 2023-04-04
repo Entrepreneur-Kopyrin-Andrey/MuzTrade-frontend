@@ -19,7 +19,7 @@ export default function News() {
         <div className="container news">
           <div className="news__header">
             <img src={stars} alt="about" width={250} height={30} />
-            <h2 className="news__title Neucha400">Новости нашей компании</h2>
+            <h2 className="news__title SansPro500">Новости нашей компании</h2>
             <img src={line} alt="about" width={114} height={5} />
             <p className="Monrat400">Мероприятия, в которых мы участвовали</p>
           </div>

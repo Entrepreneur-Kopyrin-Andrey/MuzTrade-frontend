@@ -2,6 +2,8 @@ import React from "react";
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 import stars from '../assets/stars.svg'
 import vk from '../assets/vk.svg'
+import tg from '../assets/telegram.svg'
+import { Link } from "react-router-dom";
 
 export default function Contacts() {
   return (
@@ -10,7 +12,7 @@ export default function Contacts() {
         <div className="container contacts">
           <div className="contacts__header">
             <img src={stars} alt="stars" width={250} height={30} />
-            <h2 className="contacts__title Neucha400">Контакты</h2>
+            <h2 className="contacts__title SansPro500">Контакты</h2>
           </div>
           <div className="contacts__content">
             <div className="contactSide">
@@ -55,6 +57,15 @@ export default function Contacts() {
                   height={58}
                 />
               </a>
+              <Link href={"https://t.me/muztrade_pro"} className="tg">
+                <img
+                  className="tg"
+                  src={tg}
+                  alt="vk"
+                  width={58}
+                  height={58}
+                />
+              </Link>
             </div>
             </div>
           </div>

@@ -31,7 +31,7 @@ export default function PhotosCardAdmin({ id, src, date, summary }) {
       <div className="cardWrapper">
         <div className="newsImage">
           <img
-            src={"http://localhost:4444" + src}
+            src={"https://api.muztrade.com:4444" + src}
             alt="news"
             className="image"
           />

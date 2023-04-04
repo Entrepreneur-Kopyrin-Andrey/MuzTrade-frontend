@@ -2,6 +2,8 @@ import React from "react";
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 import stars from '../../assets/stars.svg'
 import vk from '../../assets/vk.svg'
+import tg from '../../assets/telegram.svg'
+import { Link } from "react-router-dom";
 
 export default function MobileContacts() {
   return (
@@ -10,7 +12,7 @@ export default function MobileContacts() {
       <div className="container contacts">
         <div className="contacts__header">
             <img src={stars} alt="about" width={250} height={30} />
-            <h2 className="contacts__title Neucha400">Контакты</h2>
+            <h2 className="contacts__title SansPro500">Контакты</h2>
         </div>
         <div className="contacts__map">
           <YMaps  className="ymaps">
@@ -34,24 +36,32 @@ export default function MobileContacts() {
           <p className="connection__address Monrat500">
             Мурманск, Рыбный проезд, д.8
           </p>
-          <p className="connection__contactFace Monrat500">
-            <span>Контактное лицо:</span>
-          </p>
           <p className="connection__timetable Monrat500">
-            <span className="Monrat500">График работы:</span> Пн - Пт с 12:00 до 20:00
+            <span className="Monrat500">График работы:</span> <br /> Пн - Пт с 12:00 до 20:00
             <br />
             Сб - Вс с 12:00 до 18:00
           </p>
         </div>
         <p className='contacts__p Monrat500'>Мы в соц.сетях:</p>
-        <a href={"https://vk.com/muztrade"} className="connections__vk">
-                <img
-                  src={vk}
-                  alt="vk"
-                  width={58}
-                  height={58}
-                />
-        </a>
+        <div className='flex-icons connections__vk'>
+          <a href={"https://vk.com/muztrade"} className="">
+                  <img
+                    src={vk}
+                    alt="vk"
+                    width={58}
+                    height={58}
+                  />
+          </a>
+          <Link href={"https://t.me/muztrade_pro"} className="tg">
+                  <img
+                    className="tg"
+                    src={tg}
+                    alt="vk"
+                    width={58}
+                    height={58}
+                  />
+          </Link>
+        </div>
       </div>
       </div>
     </>

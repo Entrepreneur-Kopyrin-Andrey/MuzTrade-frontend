@@ -364,9 +364,15 @@
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 130;
+    z-index: 330;
     background-color: #F3F3F3;
     transition: all .3s;
+    a:visited {
+      color: #000 !important;
+    }
+    a{
+      color: #000 !important;
+    }
     .menuClose{
       position: absolute;
       right: 5%;

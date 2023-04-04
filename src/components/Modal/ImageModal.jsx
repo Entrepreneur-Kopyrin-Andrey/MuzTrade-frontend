@@ -15,7 +15,7 @@ export default function ImageModal({modalClose, valueSrc}) {
       <div className="imageBackground" onClick={handleModalClick} data-layout>
             <div className="requestClose" onClick={()=>{modalClose(false)}}><img src={close} alt="close" width={31} height={34}></img></div>
         <div className="imageModal">
-            <img src={'http://localhost:4444' + valueSrc} alt="valueSrc"/>              
+            <img src={'https://api.muztrade.com:4444' + valueSrc} alt="valueSrc"/>              
         </div>
         </div>
       </>

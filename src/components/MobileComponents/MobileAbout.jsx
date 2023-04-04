@@ -7,7 +7,7 @@ export default function MobileAbout() {
       <>
       <div className="about" id="about">
         <div className='container about'>
-        <h2 className="about__title Neucha400">Информация о нас</h2>
+        <h2 className="about__title SansPro500">Информация о нас</h2>
         <div className="about__image">
           <img
           src={about}

@@ -320,8 +320,8 @@
           position: relative;
 
           animation: 3s ease-in 0s normal none infinite running infinite;
-          -webkit-animation: 1s linear 0s normal none infinite running infinite;
-          animation-timing-function: steps(5, end);
+          -webkit-animation: 7s linear 0s normal none infinite running infinite;
+          animation-timing-function: steps(500, end);
           @keyframes infinite {
             0% {
               transform: rotate(0deg);
@@ -816,7 +816,7 @@
 }
 .mobilebuttonWrapper {
   position: fixed;
-  bottom: 50px;
-  left: 20px;
+  bottom: 10px;
+  right: 10px;
   z-index: 300;
 }

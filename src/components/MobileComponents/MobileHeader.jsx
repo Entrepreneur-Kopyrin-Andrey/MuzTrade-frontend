@@ -1,6 +1,7 @@
 import React from "react";
 import logo from '../../assets/logo.svg'
 import menu from '../../assets/mobile/menu.svg'
+import { Link } from "react-router-dom";
 
 export default function MobileHeader({ onChange }) {
   
@@ -14,13 +15,15 @@ export default function MobileHeader({ onChange }) {
     <>
       <header>
         <div className="wrapper" id="wrapper">
-          <img
-            src={logo}
-            className="logo"
-            alt="logo"
-            width={210}
-            height={80}
-          />
+          <Link to={'/'}>
+              <img
+                src={logo}
+                className="logo"
+                alt="logo"
+                width={210}
+                height={80}
+              />
+          </Link>
           <img
             src={menu}
             className="menu"

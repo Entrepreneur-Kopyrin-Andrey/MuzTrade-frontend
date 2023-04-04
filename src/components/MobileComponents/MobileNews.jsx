@@ -20,7 +20,7 @@ export default function MobileNews() {
           <div className="container news">
             <div className="news__header">
               <img src={stars} alt="about" width={250} height={30} />
-              <h2 className="news__title Neucha400">
+              <h2 className="news__title SansPro500">
                 Новости нашей <br /> компании
               </h2>
               <img src={line} alt="about" width={114} height={5} />

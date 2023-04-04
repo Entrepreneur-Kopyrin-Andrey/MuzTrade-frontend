@@ -3,14 +3,14 @@ import sound from '../../assets/sound.svg'
 import scene from '../../assets/scene.svg'
 import light from '../../assets/light.svg'
 import equipment from '../../assets/equipment.svg'
-
+import file from '../../assets/Price.pdf'
 
 export default function MobileEquipment() {
     return (
       <>
       <div className="equipment" id="equipment">
         <div className="container equipment">
-        <h2 className="equipment__title Neucha400">Оборудования</h2>
+        <h2 className="equipment__title SansPro500">Оборудование</h2>
         <p className="equipment__text Monrat400">
             В нашей компании найдется оптимальное решение 
             по аренде звука и света для мероприятий любого 
@@ -25,7 +25,7 @@ export default function MobileEquipment() {
             составления спецификаций
             до монтажа и обслуживания.
         </p>
-        <p className="equipment__textLink Monrat400">Список предлагаемого оборудование можно <a className='Monrat400' href={'/'}>скачать</a></p>
+        <p className="equipment__textLink Monrat400">Список предлагаемого оборудования можно <a className='Monrat400' href={file} download="Price.pdf">скачать</a></p>
         <div className="equipment__photos">
                 <img
                     src={sound}

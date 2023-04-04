@@ -3,6 +3,7 @@ import NewsCard from "./NewsCard";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchNews } from "../redux/slices/news";
 import logo from "../assets/logo.svg";
+import { Link } from "react-router-dom";
 
 export default function NewsPage() {
   const dispatch = useDispatch();
@@ -24,7 +25,9 @@ export default function NewsPage() {
     <>
       <header className="newsCardHeader">
         <div className="newsCardWrapper">
-          <img src={logo} className="logo" alt="logo" width={210} height={80} />
+          <Link to={'/'}>
+            <img src={logo} className="logo" alt="logo" width={210} height={80} />
+          </Link>
           <a href="/">
             <button className="request">Вернуться</button>
           </a>
@@ -33,7 +36,7 @@ export default function NewsPage() {
       <div className="background backgroundPage">
         <div className="container news newsPage">
           <div className="news__header">
-            <h2 className="news__title newsPage__title Neucha400">
+            <h2 className="news__title newsPage__title SansPro500">
               Новости нашей компании
             </h2>
           </div>

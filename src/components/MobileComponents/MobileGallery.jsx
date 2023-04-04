@@ -23,7 +23,7 @@ export default function MobileGallery() {
     <>
       <div className="gallery" id="gallery">
         <div className="container gallery">
-          <h2 className="gallery__title Neucha400">
+          <h2 className="gallery__title SansPro500">
             Фотографии <br /> мероприятий
           </h2>
           <div className="gallery__photos">

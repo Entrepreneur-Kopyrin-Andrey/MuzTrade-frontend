@@ -48,7 +48,7 @@ export default function Gallery() {
       <>
         <div className="gallery" id="gallery">
           <div className="container gallery">
-            <h2 className='Neucha400'>Фотографии мероприятий</h2>
+            <h2 className='SansPro500'>Фотографии мероприятий</h2>
             <Slider {...settings}>
               {(photos.items).map((obj, index) => {
                  return(
