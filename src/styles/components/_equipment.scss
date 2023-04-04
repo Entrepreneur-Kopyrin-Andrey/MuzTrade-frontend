@@ -34,12 +34,63 @@
     justify-content: space-between;
     margin-top: 95px;
     padding-bottom: 92px;
+    .img__link {
+      display: block;
+      position: relative;
+      width: 100%;
+      cursor: pointer;
+      img{
+        height: 100%;
+      }
+      span {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+      }
+      span {
+        position: absolute;
+        top: 3px;
+        left: 0px;
+        right: 0;
+        bottom: 0;
+        z-index: 5;
+        background: rgba(0, 0, 0, .8);
+        opacity: 0;
+        color: #fff;
+        transition: opacity .2s linear;
+        text-align: left;
+        width: 400px;
+        cursor: default;
+        >a{
+            margin-top: 20px;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 24px;
+            margin: 0 auto;
+            cursor: pointer;
+            color: white;
+        }
+        >a:hover{
+          color: #ec1f27;
+        }
+        >a:visited{
+          color: #ec1f27;
+        }
+    }
+    span:hover{
+      opacity: 1;
+    }
+    }
   }
   @media (max-width: 1860px) {
     &__photos {
       img{
         width:340px;
         height:30%;
+      }
+      span{
+        width:340px !important;
       }
     }
   }
@@ -49,13 +100,8 @@
         width:310px;
         height:30%;
       }
-    }
-  }
-  @media (max-width: 1460px) {
-    &__photos {
-      img{
-        width:280px;
-        height:30%;
+      span{
+        width:310px !important;
       }
     }
   }
@@ -64,6 +110,20 @@
       img{
         width:280px;
         height:30%;
+      }
+      span{
+        width:280px !important;
+      }
+    }
+  }
+  @media (max-width: 1460px) {
+    &__photos {
+      img{
+        width:280px;
+        height:30%;
+      }
+      span{
+        width:280px !important;
       }
     }
   }
@@ -73,6 +133,9 @@
         width:240px;
         height:30%;
       }
+      span{
+        width:240px !important;
+      }
     }
   }
   @media (max-width: 1210px) {
@@ -81,6 +144,9 @@
         width:210px;
         height:25%;
       }
+      span{
+        width:210px !important;
+      }
     }
   }
   @media (max-width: 1070px) {
@@ -88,6 +154,9 @@
       img{
         width:190px;
         height:25%;
+      }
+      span{
+        width:190px !important;
       }
     }
   }
