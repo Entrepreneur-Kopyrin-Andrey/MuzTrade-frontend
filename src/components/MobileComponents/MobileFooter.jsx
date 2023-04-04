@@ -31,7 +31,7 @@ export default function MobileFooter() {
             <p>
               Мурманск, Рыбный проезд, д.8.
             </p>
-          <Link href={"https://vk.com/muztrade"} className="vk">
+          <a href={"https://vk.com/muztrade"} className="vk">
             <img
               className="vk"
               src={vk}
@@ -39,8 +39,8 @@ export default function MobileFooter() {
               width={58}
               height={58}
             />
-          </Link>
-          <Link href={"https://t.me/muztrade_pro"} className="vk">
+          </a>
+          <a href={"https://t.me/muztrade_pro"} className="vk">
             <img
               className="tg"
               src={tg}
@@ -48,7 +48,7 @@ export default function MobileFooter() {
               width={58}
               height={58}
             />
-          </Link>
+          </a>
           </div>
         </div>
       </div>

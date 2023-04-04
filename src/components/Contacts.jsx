@@ -57,7 +57,7 @@ export default function Contacts() {
                   height={58}
                 />
               </a>
-              <Link href={"https://t.me/muztrade_pro"} className="tg">
+              <a href={"https://t.me/muztrade_pro"} className="tg">
                 <img
                   className="tg"
                   src={tg}
@@ -65,7 +65,7 @@ export default function Contacts() {
                   width={58}
                   height={58}
                 />
-              </Link>
+              </a>
             </div>
             </div>
           </div>
