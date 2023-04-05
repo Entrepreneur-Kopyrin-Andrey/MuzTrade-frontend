@@ -264,6 +264,40 @@
     height: 450px;
   }
 }
+@media (max-width: 1200px) {
+  .serach_wrap {
+    width: 95%;
+    .serach_container {
+      .searchBar {
+        padding-left: 20px;
+        min-width: 543px;
+        min-height: 70px;
+      }
+    }
+  }
+  .cardWrapper {
+    height: 380px;
+    .data {
+      font-size: 20px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+    .summary {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .adminButtons {
+      .edit {
+        font-size: 14px;
+        padding: 11px;
+      }
+      .delete {
+        font-size: 14px;
+        padding: 11px 15px;
+      }
+    }
+  }
+}
 
 // PAGES
 
@@ -348,6 +382,60 @@
     margin-bottom: 70px;
   }
 }
+@media (max-width: 1850px) {
+  .createWrapper {
+    h1 {
+      font-size: 80px;
+    }
+  }
+}
+@media (max-width: 1500px) {
+  .createWrapper {
+    width: 65%;
+    h1 {
+      width: 100%;
+      font-size: 60px;
+      margin-bottom: 30px;
+    }
+    .createUp {
+      .upload {
+        width: 370px;
+        height: 230px;
+        .fileUpl {
+          position: relative;
+          .uploadImg {
+            width: 370px;
+            height: 230px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .createWrapper {
+    width: 65%;
+    h1 {
+      width: 100%;
+      font-size: 60px;
+      margin-bottom: 30px;
+    }
+    .createUp {
+      .upload {
+        width: 330px;
+        height: 200px;
+        font-size: 14px;
+        .fileUpl {
+          position: relative;
+          .uploadImg {
+            width: 330px;
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+}
 
 .summaryInput,
 .descriptionInput {
@@ -363,6 +451,24 @@
   &:focus {
     border-color: #0a839e;
   }
+}
+@media (max-width: 1500px) {
+  .summaryInput,
+.descriptionInput {
+  max-width: 370px;
+  min-width: 370px;
+  max-height: 230px;
+  min-height: 230px;
+}
+}
+@media (max-width: 1200px) {
+  .summaryInput,
+.descriptionInput {
+  max-width: 330px;
+  min-width: 330px;
+  max-height: 200px;
+  min-height: 200px;
+}
 }
 
 .titleContainer {
@@ -382,6 +488,18 @@
     // margin-bottom: 95px;
     &:focus {
       border-color: #0a839e;
+    }
+  }
+  @media (max-width: 1500px) {
+    .titleInput,
+    .dateInput {
+      width: 370px;
+    }
+  }
+  @media (max-width: 1200px) {
+    .titleInput,
+    .dateInput {
+      width: 330px;
     }
   }
   .bottomButtons {
@@ -412,6 +530,16 @@
       color: #ffffff;
     }
   }
+  @media (max-width:1500px) {
+    .bottomButtons {
+      margin-top: 45px;
+    }
+  }
+  @media (max-width:1200px) {
+    .bottomButtons {
+      margin-top: 25px;
+    }
+  }
 }
 
 // CREATE PHOTO
@@ -435,6 +563,17 @@
       &:focus {
         border-color: #0a839e;
       }
+    }
+    @media (max-width:1500px) {
+      .dateInput_ph {
+        width: 370px;
+        min-height: 60px;
+      }
+    }
+    @media (max-width: 1200px) {
+    .dateInput_ph {
+      width: 330px;
+    }
     }
     .bottomButtons_ph {
       display: flex;
@@ -460,5 +599,15 @@
         background: #ec1f27;
       }
     }
+    @media (max-width:1500px) {
+      .bottomButtons_ph {
+        width: 370px;
+      }
+    }
+    @media (max-width: 1200px) {
+      .bottomButtons_ph {
+        width: 330px;
+      }
+      }
   }
 }

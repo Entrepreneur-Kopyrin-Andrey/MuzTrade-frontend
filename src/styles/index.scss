@@ -110,3 +110,24 @@ line-height: 120px;
   color: #ec1f27 !important;
 }
 
+.mobile_gallery_button{
+  display: block;
+  margin: 0 auto;
+  margin-top: 45px;
+  margin-bottom: -15px;
+}
+@media (max-width: 425px) {
+  .mobile_gallery_button{
+    font-size: 15px;
+  }
+}
+@media (max-width: 375px) {
+  .mobile_gallery_button{
+    font-size: 14px;
+  }
+}
+@media (max-width: 320px) {
+  .mobile_gallery_button{
+    font-size: 13px;
+  }
+}

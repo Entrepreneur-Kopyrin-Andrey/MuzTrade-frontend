@@ -52,7 +52,7 @@ export default function MobileContacts() {
                     height={58}
                   />
           </a>
-          <a href={"https://t.me/muztrade_pro"} className="tg">
+          <a href={"https://t.me/muztrade_pro"}>
                   <img
                     className="tg"
                     src={tg}

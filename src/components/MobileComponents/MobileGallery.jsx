@@ -19,6 +19,14 @@ export default function MobileGallery() {
     dispatch(fetchPhotos());
   }, []);
 
+  const [count, setCount] = React.useState(6);
+  const [countBool, setCountBool] = React.useState(false);
+
+  const countClick = () => {
+    count + 3 >= photos.items.length ? setCountBool(true) : setCountBool(false);
+    setCount(count + 3);
+  };
+
   return (
     <>
       <div className="gallery" id="gallery">
@@ -27,7 +35,7 @@ export default function MobileGallery() {
             Фотографии <br /> мероприятий
           </h2>
           <div className="gallery__photos">
-            {photos.items.map((obj, index) => {
+            {photos.items.filter((item, idx) => idx < count).map((obj, index) => {
               return (
                 <div key={index} className="img__link" onClick={() => handleImage(obj.imageUrl)}>
                   <img
@@ -40,6 +48,12 @@ export default function MobileGallery() {
               );
             })}
           </div>
+          <button
+            className={countBool ? "none" : "news__button request mobile_gallery_button Monrat400"}
+            onClick={() => countClick()}
+          >
+            Еще новости
+          </button>
         </div>
       </div>
     </>
