@@ -11,7 +11,7 @@ export default function ModalVideo() {
     <div className="video" >
          <div className="closeVideo" ><img src={close} alt="close" width={31} height={34}></img></div>
       <div className="videoContent" onClick={e => e.stopPropagation()}>
-        <Video autoPlay loop controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}>
+        <Video playsinline autoPlay loop controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}>
           <source src={VideoFile} type="video/webm" />
         </Video>
       </div>
