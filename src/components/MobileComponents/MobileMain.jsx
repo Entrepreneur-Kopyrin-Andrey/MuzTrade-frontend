@@ -6,6 +6,7 @@ import button from '../../assets/button.svg'
 import play from '../../assets/play.svg'
 import { Link } from 'react-router-dom';
 import main from '../../assets/main.png'
+import VideoFile from "../../assets/video.mp4";
 
 export default function MobileMain() {
 
@@ -13,7 +14,43 @@ export default function MobileMain() {
 
     return (
       <>
-        <div className='main' id='main'>
+        <div className="main" id="main">
+        <div className="blur"></div>
+        <video src={VideoFile} autoPlay loop muted className="videoBG" />
+
+        <div className=" mainWrapper">
+          <div className=" content ">
+              <h1 className="SansPro500">Прокат<br />сценического<br />оборудования</h1>
+            <div className="playBtn">
+              <div
+                className="circleBtn"
+                onClick={() => setModalActive(!modalActive)}
+              >
+                <img
+                  className="infinite"
+                  src={button}
+                  alt="button"
+                />
+
+                <img
+                  src={play}
+                  className="play"
+                  alt="play"
+                />
+                {modalActive && <ModalVideo />}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </>
+    );
+  }
+
+
+
+  /*
+   <div className='main' id='main'>
           <div className="container mainWrapper mainWrapper__mobile">
             <div className="leftSide">
               <h1>Прокат сценического оборудования</h1>
@@ -30,7 +67,7 @@ export default function MobileMain() {
               width={179}
               height={200}
             />
-            {/*
+            {
             <img
               className="main1"
               src={main1}
@@ -45,7 +82,7 @@ export default function MobileMain() {
               alt="main2"
               width={396}
               height={384}
-            />*/}
+            />}
             <img
               className="main"
               src={main}
@@ -82,10 +119,4 @@ export default function MobileMain() {
 
           </div>
         </div>
-      </>
-    );
-  }
-
-
-
-  
+  */

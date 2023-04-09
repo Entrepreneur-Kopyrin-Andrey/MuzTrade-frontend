@@ -24,238 +24,216 @@
       align-items: center;
       h1 {
         color: #ffffff;
-        font-size: 145px;
+        font-size: 170px;
         padding-top: 300px;
-        line-height: 180px;
+        line-height: 220px;
         margin-left: 150px;
       }
-      @media (max-width: 1700px) {
+      @media (max-width: 2000px) {
         h1 {
-          font-size: 90px;
+        padding-top: 260px;
+          font-size: 150px;
+          line-height: 200px;
         }
       }
-      @media (max-width: 1600px) {
+      @media (max-width: 1750px) {
+        h1 {
+          font-size: 130px;
+          line-height: 180px;
+        }
+      }
+      @media (max-width: 1550px) {
+        h1 {
+          padding-top: 240px;
+          font-size: 90px;
+          line-height: 120px;
+        }
+      }
+      @media (max-width: 1350px) {
         h1 {
           font-size: 80px;
-        }
-      }
-      @media (max-width: 1450px) {
-        h1 {
-          font-size: 70px;
-        }
-      }
-      @media (max-width: 1300px) {
-        h1 {
-          margin-top: 105px;
-          margin-bottom: -35px;
-          font-size: 60px;
+          line-height: 110px;
         }
       }
       @media (max-width: 1150px) {
         h1 {
-          font-size: 50px;
-        }
-      }
-      @media (max-width: 1100px) {
-        h1 {
-          line-height: 90px;
-          font-size: 46px;
-        }
-      }
-      @media (max-width: 1024px) {
-        h1 {
-          font-size: 80px;
-          text-align: left;
-          margin-top: 60px;
-          line-height: 140px;
-        }
-      }
-      @media (max-width: 750px) {
-        h1 {
+          padding-top: 210px;
           font-size: 70px;
-          margin-top: 60px;
-        }
-      }
-      @media (max-width: 640px) {
-        h1 {
-          font-size: 70px;
-          line-height: 110px;
-          margin-top: 55px;
-        }
-      }
-      @media (max-width: 600px) {
-        h1 {
-          font-size: 65px;
-          line-height: 110px;
-          margin-top: 60px;
-        }
-      }
-      @media (max-width: 580px) {
-        h1 {
-          font-size: 60px;
           line-height: 100px;
-          margin-top: 60px;
-        }
-      }
-      @media (max-width: 530px) {
-        h1 {
-          line-height: 90px;
-          font-size: 54px;
-          margin-top: 60px;
-        }
-      }
-      @media (max-width: 495px) {
-        h1 {
-          line-height: 85px;
-          font-size: 50px;
-          margin-top: 60px;
-        }
-      }
-      @media (max-width: 475px) {
-        h1 {
-          font-size: 45px;
-          line-height: 80px;
-          margin-top: 60px;
-        }
-      }
-      @media (max-width: 400px) {
-        h1 {
-          font-size: 40px;
-          line-height: 70px;
-          margin-top: 60px;
-        }
-      }
-      @media (max-width: 360px) {
-        h1 {
-          font-size: 35px;
-          line-height: 60px;
-          margin-top: 60px;
-        }
-      }
-      @media (max-width: 310px) {
-        h1 {
-          font-size: 30px;
-          line-height: 55px;
-          margin-top: 60px;
-        }
-      }
-      .request {
-        margin-top: 83px;
-        border: 1px solid #ec1f27;
-        background-color: transparent;
-        padding: 20px 30px;
-        color: #3f3f3f;
-        cursor: pointer;
-        font-size: 20px;
-        &:hover {
-          background-color: #ec1f27;
-          color: white;
-          transition: 250ms;
         }
       }
       @media (max-width: 1024px) {
-        .request {
-          font-size: 23px;
-          padding: 25px 45px;
-          margin-top: 60px;
+        h1 {
+          text-align: left;
+          font-size: 65px;
+          line-height: 90px;
+          margin-block-start: 0em;
+          margin-block-end: 0em;
+          margin-left: 0px;
+          padding-left: 90px;
         }
       }
-      @media (max-width: 750px) {
-        .request {
-          font-size: 21px;
-          padding: 25px 40px;
-          margin-top: 60px;
-        }
-      }
-      @media (max-width: 680px) {
-        .request {
-          font-size: 19px;
-          padding: 25px 40px;
-          margin-top: 60px;
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 55px;
+          line-height: 80px;
+          padding-left: 70px;
         }
       }
       @media (max-width: 635px) {
-        .request {
-          font-size: 18px;
-          padding: 22px 30px;
-          margin-top: 60px;
+        h1 {
+          font-size: 50px;
+          line-height: 75px;
+          padding-left: 50px;
         }
       }
-      @media (max-width: 565px) {
-        .request {
-          font-size: 17px;
-          padding: 22px 30px;
-          margin-top: 60px;
+      @media (max-width: 490px) {
+        h1 {
+          font-size: 45px;
+          line-height: 65px;
+          padding-left: 35px;
         }
       }
-      @media (max-width: 535px) {
-        .request {
-          font-size: 16px;
-          padding: 22px 30px;
-          margin-top: 60px;
+      @media (max-width: 425px) {
+        h1 {
+          font-size: 40px;
+          line-height: 60px;
+          padding-left: 25px;
         }
       }
-      @media (max-width: 515px) {
-        .request {
-          font-size: 16px;
-          padding: 22px 25px;
-          margin-top: 60px;
+      @media (max-width: 375px) {
+        h1 {
+          font-size: 35px;
+          line-height: 60px;
+          margin-top: 10px;
         }
       }
-      @media (max-width: 485px) {
-        .request {
-          font-size: 16px;
-          padding: 22px 20px;
-          margin-top: 55px;
-        }
-      }
-      @media (max-width: 460px) {
-        .request {
-          font-size: 16px;
-          padding: 22px 15px;
-          margin-top: 55px;
-        }
-      }
-      @media (max-width: 430px) {
-        .request {
-          font-size: 14px;
-          padding: 22px 15px;
-          margin-top: 50px;
-        }
-      }
-      @media (max-width: 390px) {
-        .request {
-          font-size: 13px;
-          padding: 22px 15px;
-          margin-top: 45px;
-        }
-      }
-      @media (max-width: 365px) {
-        .request {
-          font-size: 13px;
-          padding: 17px 10px;
-          margin-top: 40px;
-        }
-      }
-      @media (max-width: 340px) {
-        .request {
-          font-size: 12px;
-          padding: 17px 10px;
-          margin-top: 40px;
+      @media (max-width: 320px) {
+        h1 {
+          font-size: 27px;
+          line-height: 55px;
+          padding-left: 15px;
+          margin-top: 0px;
         }
       }
       .playBtn {
         width: 100%;
         display: flex;
         justify-content: center;
-        padding-bottom: 100px;
+        padding-bottom: 150px;
         
         .circleBtn {
-          width: 200px;
-          height: 200px;
+          .infinite{
+            width: 350px;
+            height: 350px;
+          }
+          .play{
+            width: 60px;
+            height: 60px;
+          }
+          @media (max-width: 2000px) {
+            .infinite{
+              width: 330px;
+              height: 330px;
+            }
+            .play{
+              width: 50px;
+              height: 50px;
+            }
+          }
+          @media (max-width: 1750px) {
+            .infinite{
+              width: 310px;
+              height: 310px;
+            }
+            .play{
+              width: 40px;
+              height: 40px;
+            }
+          }
+          @media (max-width: 1550px) {
+            .infinite{
+              width: 250px;
+              height: 250px;
+            }
+            .play{
+              width: 35px;
+              height: 35px;
+            }
+          }
+          @media (max-width: 1350px) {
+            .infinite{
+              width: 230px;
+              height: 230px;
+            }
+            .play{
+              width: 30px;
+              height: 30px;
+            }
+          }
+          @media (max-width: 1150px) {
+            .infinite{
+              width: 210px;
+              height: 210px;
+            }
+            .play{
+              width: 25px;
+              height: 25px;
+            }
+          }
+          @media (max-width: 1024px) {
+            .infinite{
+              width: 190px;
+              height: 190px;
+            }
+            .play{
+              width: 25px;
+              height: 25px;
+            }
+          }
+          @media (max-width: 768px) {
+            .infinite{
+              width: 170px;
+              height: 170px;
+            }
+            .play{
+              width: 20px;
+              height: 20px;
+            }
+          }
+          @media (max-width: 635px) {
+            .infinite{
+              width: 150px;
+              height: 150px;
+            }
+            .play{
+              width: 18px;
+              height: 18px;
+            }
+          }
+          @media (max-width: 425px) {
+            .infinite{
+              width: 130px;
+              height: 130px;
+            }
+            .play{
+              width: 15px;
+              height: 15px;
+            }
+          }
+          @media (max-width: 320px) {
+            .infinite{
+              width: 110px;
+              height: 110px;
+            }
+            .play{
+              width: 15px;
+              height: 15px;
+            }
+          }
           border-radius: 50%;
           border: 0;
-          top: 315px;
+          top: 356px;
           cursor: pointer;
           display: flex;
           align-items: center;
@@ -284,468 +262,11 @@
               }
             }
           }
-
           .play {
             position: absolute;
           }
         }
       }
-    }
-
-    .rightSide {
-      margin-top: 100px;
-      display: flex;
-
-      .main {
-        background-color: transparent;
-        position: relative;
-      }
-
-      @media (max-width: 2560px) {
-        .circleBtn {
-          right: 32%;
-        }
-      }
-      @media (max-width: 2400px) {
-        .circleBtn {
-          right: 31%;
-        }
-      }
-      @media (max-width: 2250px) {
-        .circleBtn {
-          right: 30%;
-        }
-      }
-      @media (max-width: 2150px) {
-        .circleBtn {
-          right: 29%;
-        }
-      }
-      @media (max-width: 1950px) {
-        .circleBtn {
-          right: 27%;
-        }
-      }
-      @media (max-width: 1850px) {
-        .circleBtn {
-          right: 25%;
-        }
-      }
-      @media (max-width: 1750px) {
-        .circleBtn {
-          right: 25%;
-        }
-        .main {
-          width: 720px !important;
-          height: 750px !important;
-          margin-left: 25px;
-        }
-      }
-      @media (max-width: 1600px) {
-        .circleBtn {
-          right: 23%;
-        }
-      }
-      @media (max-width: 1500px) {
-        .circleBtn {
-          top: 245px;
-        }
-        .main {
-          width: 620px !important;
-          height: 650px !important;
-          margin-left: 25px;
-        }
-      }
-      @media (max-width: 1400px) {
-        .waves {
-          width: 159px;
-        }
-        .circleBtn {
-          right: 22%;
-          .infinite {
-            width: 180px !important;
-            height: 180px !important;
-          }
-          .play {
-            width: 35px !important;
-            height: 35px !important;
-          }
-        }
-      }
-      @media (max-width: 1300px) {
-        .main {
-          width: 520px !important;
-          height: 550px !important;
-          margin-left: 15px;
-        }
-        .circleBtn {
-          top: 215px;
-          right: 24%;
-        }
-      }
-      @media (max-width: 1250px) {
-        .circleBtn {
-        }
-        .waves {
-          width: 139px;
-        }
-      }
-      @media (max-width: 1400px) {
-      }
-      @media (max-width: 1200px) {
-        .circleBtn {
-          .infinite {
-            width: 150px !important;
-            height: 150px !important;
-          }
-          .play {
-            width: 30px !important;
-            height: 30px !important;
-          }
-          top: 210px;
-          right: 22%;
-        }
-        .waves {
-          width: 119px;
-          top: 110px;
-        }
-      }
-      @media (max-width: 1100px) {
-        .main {
-          width: 420px !important;
-          height: 450px !important;
-          margin-left: 15px;
-        }
-        .circleBtn {
-          .infinite {
-            width: 120px !important;
-            height: 120px !important;
-          }
-          .play {
-            width: 25px !important;
-            height: 25px !important;
-          }
-          top: 165px;
-          right: 23%;
-        }
-      }
-    }
-    @media (max-width: 1024px) {
-      .rightSide {
-        margin-top: 10px;
-        display: flex;
-
-        .main {
-          width: 620px !important;
-          height: 750px !important;
-          margin: 0 auto;
-        }
-        .waves {
-          width: 250px;
-          height: 250px;
-          right: 7%;
-          top: 580px;
-        }
-        .plus {
-          right: 50px;
-          top: 1230px;
-          width: 110px;
-          height: 110px;
-        }
-        .circleBtn {
-          right: 46%;
-          top: 850px;
-          .infinite {
-            width: 200px !important;
-            height: 200px !important;
-          }
-          .play {
-            width: 20px;
-            height: 20px;
-          }
-          width: 200px;
-          height: 200px;
-          border-radius: 50%;
-          position: absolute;
-          border: 0;
-          // background-color: rgba(239, 239, 239, 0.6);
-        }
-      }
-    }
-    @media (max-width: 700px) {
-      .rightSide {
-        .main {
-          width: 520px !important;
-          height: 650px !important;
-        }
-        .circleBtn {
-          right: 44%;
-          top: 830px;
-          .infinite {
-            width: 160px !important;
-            height: 160px !important;
-          }
-          .play {
-            width: 25px;
-            height: 25px;
-          }
-          width: 200px;
-          height: 200px;
-        }
-        .waves {
-          width: 210px;
-          height: 210px;
-          right: 5px;
-          top: 580px;
-        }
-        .plus {
-          right: 30px;
-          top: 1170px;
-          width: 100px;
-          height: 100px;
-        }
-      }
-    }
-    @media (max-width: 640px) {
-      .rightSide {
-        .circleBtn {
-          right: 43%;
-          top: 740px;
-          .infinite {
-            width: 160px !important;
-            height: 160px !important;
-          }
-          .play {
-            width: 25px;
-            height: 25px;
-          }
-          width: 200px;
-          height: 200px;
-        }
-        .waves {
-          width: 190px;
-          height: 190px;
-          right: 5px;
-          top: 500px;
-        }
-        .plus {
-          right: 30px;
-          top: 1100px;
-          width: 80px;
-          height: 80px;
-        }
-      }
-    }
-    @media (max-width: 580px) {
-      .rightSide {
-        .main {
-          width: 420px !important;
-          height: 530px !important;
-        }
-        .waves {
-          width: 170px;
-          height: 170px;
-          right: 5px;
-          top: 480px;
-        }
-        .plus {
-          right: 30px;
-          top: 950px;
-          width: 70px;
-          height: 70px;
-        }
-        .circleBtn {
-          .infinite {
-            width: 130px !important;
-            height: 130px !important;
-          }
-          .play {
-            width: 25px;
-            height: 25px;
-          }
-          right: 40%;
-          top: 660px;
-        }
-      }
-    }
-    @media (max-width: 530px) {
-      .rightSide {
-        .circleBtn {
-          right: 39%;
-          top: 630px;
-        }
-        .waves {
-          width: 150px;
-          height: 150px;
-          right: 5px;
-          top: 480px;
-        }
-        .plus {
-          right: 30px;
-          top: 930px;
-          width: 60px;
-          height: 60px;
-        }
-      }
-    }
-    @media (max-width: 480px) {
-      .rightSide {
-        .waves {
-          width: 150px;
-          height: 150px;
-          right: 5px;
-          top: 460px;
-        }
-        .plus {
-          right: 30px;
-          top: 910px;
-          width: 60px;
-          height: 60px;
-        }
-        .circleBtn {
-          top: 610px;
-        }
-      }
-    }
-    @media (max-width: 450px) {
-      .rightSide {
-        .main {
-          width: 320px !important;
-          height: 430px !important;
-        }
-        .waves {
-          width: 130px;
-          height: 130px;
-          right: 5px;
-          top: 460px;
-        }
-        .plus {
-          right: 30px;
-          top: 810px;
-          width: 50px;
-          height: 50px;
-        }
-        .circleBtn {
-          .infinite {
-            width: 100px !important;
-            height: 100px !important;
-          }
-          .play {
-            width: 20px !important;
-            height: 20px !important;
-          }
-          top: 560px;
-          right: 34%;
-        }
-      }
-    }
-    @media (max-width: 400px) {
-      .rightSide {
-        .waves {
-          width: 110px;
-          height: 110px;
-          right: 5px;
-          top: 425px;
-        }
-        .plus {
-          right: 20px;
-          top: 780px;
-          width: 40px;
-          height: 40px;
-        }
-        .circleBtn {
-          top: 530px;
-          right: 32%;
-        }
-      }
-    }
-    @media (max-width: 360px) {
-      .rightSide {
-        .waves {
-          width: 100px;
-          height: 100px;
-          right: 2px;
-          top: 380px;
-        }
-        .plus {
-          right: 15px;
-          top: 740px;
-          width: 40px;
-          height: 40px;
-        }
-        .circleBtn {
-          top: 470px;
-          right: 31%;
-        }
-      }
-    }
-    @media (max-width: 340px) {
-      .rightSide {
-        .main {
-          width: 250px !important;
-          height: 370px !important;
-        }
-        .circleBtn {
-          .infinite {
-            width: 90px !important;
-            height: 90px !important;
-          }
-          .play {
-            width: 17px !important;
-            height: 17px !important;
-          }
-          top: 450px;
-          right: 27%;
-        }
-        .plus {
-          right: 15px;
-          top: 680px;
-          width: 40px;
-          height: 40px;
-        }
-      }
-    }
-    @media (max-width: 319px) {
-      .rightSide {
-        .plus {
-          right: 15px;
-          top: 680px;
-          width: 40px;
-          height: 40px;
-        }
-        .waves {
-          width: 100px;
-          height: 100px;
-          right: 2px;
-          top: 380px;
-        }
-      }
-    }
-    @media (max-width: 300px) {
-      .rightSide {
-        .main {
-          width: 250px !important;
-          height: 370px !important;
-        }
-        .circleBtn {
-          .infinite {
-            width: 90px !important;
-            height: 90px !important;
-          }
-          .play {
-            width: 17px !important;
-            height: 17px !important;
-          }
-          top: 430px;
-          right: 24%;
-        }
-      }
-    }
-  }
-  @media (max-width: 340px) {
-    .mainWrapper {
-      display: grid;
-      grid-template-columns: 50% 50%;
     }
   }
 }
@@ -789,7 +310,65 @@
 }
 @media (max-width: 1024px) {
   .main {
-    padding-top: 70px;
+    .blur {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .videoBG {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+    .mainWrapper {
+      .content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        h1{
+
+        }
+        .playBtn {
+          margin-top: 30px;
+          padding-bottom: 80px;
+          justify-content: flex-start;
+          padding-left: 90px;
+        }
+        @media (max-width: 768px) {
+          .playBtn {
+            padding-left: 70px;
+          }
+        }
+        @media (max-width: 635px) {
+          .playBtn {
+            padding-left: 50px;
+          }
+        }
+        @media (max-width: 490px) {
+          .playBtn {
+            padding-left: 35px;
+          }
+        }
+        @media (max-width: 425px) {
+          .playBtn {
+            padding-left: 25px;
+          }
+        }
+        @media (max-width: 320px) {
+          .playBtn {
+            padding-left: 15px;
+          }
+        }
+      }
+    }
   }
 }
 

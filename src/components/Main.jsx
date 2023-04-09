@@ -27,16 +27,12 @@ export default function Main() {
                   className="infinite"
                   src={button}
                   alt="button"
-                  width={200}
-                  height={200}
                 />
 
                 <img
                   src={play}
                   className="play"
                   alt="play"
-                  width={40}
-                  height={40}
                 />
                 {modalActive && <ModalVideo />}
               </div>
