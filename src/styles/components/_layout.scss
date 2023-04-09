@@ -788,6 +788,7 @@ footer {
     cursor: pointer;
     transform: rotate(-90deg);
     left: -90px;
+    z-index: 1;
     .contentButton {
       width: 80%;
       margin: 0 auto;
