@@ -6,17 +6,31 @@ import button from '../assets/button.svg'
 import play from '../assets/play.svg'
 import plus from '../assets/plus.svg'
 import main from '../assets/main.png'
+import "react-html5video/dist/styles.css";
+import { DefaultPlayer as Video } from "react-html5video";
+import VideoFile from "../assets/video.mp4";
 
 
 
 export default function Main() {
+
   const [modalActive, setModalActive] = React.useState(false);
   const { setRequestModalValue } = React.useContext(ValueContext)
 
   return (
     <>
-      <div className="main" id="main">
-        <div className="container mainWrapper">
+      <div className="video__wrapper">
+        <Video autoPlay loop muted controls={[]}>
+          <source src={VideoFile} type="video/webm"/>
+        </Video>
+        <div className="bg-overlay"></div>
+      </div>
+    </>
+  );
+}
+
+/**
+  <div className="container mainWrapper">
           <div className="leftSide">
             <h1 className="SansPro500">Прокат сценического оборудования</h1>
             <button onClick={() => setRequestModalValue(true)} className="request Monrat400" >Оставить заявку</button>
@@ -31,7 +45,7 @@ export default function Main() {
               height={200}
             />
 
-            {/* <img
+            { <img
               className="main1"
               src={main1}
               alt="main1"
@@ -45,7 +59,7 @@ export default function Main() {
               alt="main2"
               width={396}
               height={384}
-            /> */}
+            /> }
 
             <img
               className="main"
@@ -83,7 +97,4 @@ export default function Main() {
             </div>
           </div>
         </div>
-      </div>
-    </>
-  );
-}
+ */
