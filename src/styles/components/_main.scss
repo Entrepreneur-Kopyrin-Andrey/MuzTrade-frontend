@@ -285,29 +285,134 @@
 
   .closeVideo {
     position: absolute;
-    right: 10%;
-    top: 10%;
+    right: 20%;
+    top: 13%;
     cursor: pointer;
   }
   .videoContent {
-    width: 70%;
-    height: 70%;
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    height: 750px;
   }
-}
-@media (max-width: 1024px) {
-  .video {
+  @media (max-width: 2300px) {
     .closeVideo {
-      position: absolute;
+      right: 15%;
+      top: 13%;
+    }
+  }
+  @media (max-width: 1931px) {
+    .videoContent {
+      width: 800px;
+      height: 590px;
+    }
+    .closeVideo {
+      right: 14%;
+      top: 5%;
+    }
+  }
+  @media (max-width: 1630px) {
+    .videoContent {
+      width: 600px;
+      height: 500px;
+    }
+    .closeVideo {
+      right: 12%;
+      top: 8%;
+    }
+  }
+  @media (max-width: 1375px) {
+    .videoContent {
+      width: 530px;
+      height: 450px;
+    }
+    .closeVideo {
+      right: 14%;
+      top: 10%;
+    }
+  }
+  @media (max-width: 1200px) {
+    .videoContent {
+      width: 500px;
+      height: 420px;
+    }
+    .closeVideo {
       right: 10%;
-      top: 17%;
-      cursor: pointer;
+      top: 8%;
+    }
+  }
+  @media (max-width: 1024px) {
+    .closeVideo {
+      right: 6%;
+      top: 11%;
     }
     .videoContent {
-      margin-top: 150px;
-      width: 80%;
+      width: 500px;
+      height: 420px;
+    }
+  }
+  @media (max-width: 850px) {
+    .closeVideo {
+      right: 7%;
+      top: 14%;
+    }
+    .videoContent {
+      width: 420px;
+      height: 350px;
+    }
+  }
+  @media (max-width: 720px) {
+    .closeVideo {
+      right: 7%;
+      top: 18%;
+    }
+    .videoContent {
+      width: 350px;
+      height: 300px;
+    }
+  }
+  @media (max-width: 600px) {
+    .closeVideo {
+      right: 7%;
+      top: 18%;
+    }
+    .videoContent {
+      width: 310px;
+      height: 250px;
+    }
+  }
+  @media (max-width: 490px) {
+    .closeVideo {
+      right: 6%;
+      top: 25%;
+    }
+    .videoContent {
+      width: 260px;
+      height: 210px;
+    }
+  }
+  @media (max-width: 425px) {
+    .closeVideo {
+      right: 6%;
+      top: 25%;
+    }
+    .videoContent {
+      width: 220px;
+      height: 190px;
+    }
+  }
+  @media (max-width: 375px) {
+    .closeVideo {
+      right: 6%;
+      top: 30%;
+    }
+    .videoContent {
+      width: 180px;
+      height: 150px;
     }
   }
 }
+
 @media (max-width: 1024px) {
   .main {
     .blur {
