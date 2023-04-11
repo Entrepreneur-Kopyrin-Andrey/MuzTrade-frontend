@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo2023.svg";
 import phone from "../assets/phone.svg";
 import { Link } from 'react-router-dom';
 

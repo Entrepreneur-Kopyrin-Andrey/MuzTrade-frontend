@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo2023.svg'
 import menu from '../../assets/mobile/menu.svg'
 import { Link } from "react-router-dom";
 

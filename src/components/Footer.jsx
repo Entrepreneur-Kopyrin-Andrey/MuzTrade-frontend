@@ -1,8 +1,7 @@
 import React from "react";
-import logo from '../assets/logo.svg'
+import logo from '../assets/logo2023.svg'
 import vk from '../assets/vk.svg'
 import tg from '../assets/telegram.svg'
-import phone from '../assets/phone.svg'
 
 export default function Footer() {
   return (
