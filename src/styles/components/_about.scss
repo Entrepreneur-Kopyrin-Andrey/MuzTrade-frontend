@@ -158,10 +158,10 @@
 @media (max-width: 1024px) {
   .about {
     &__title {
-      margin-top: 93px;
+      margin-top: 55px;
     }
     &__image {
-      margin-top: 74px;
+      margin-top: 50px;
       margin-bottom: 53px;
       text-align: center;
       img{
@@ -170,8 +170,8 @@
     }
     @media (max-width: 720px) {
       &__image {
-        margin-top: 54px;
-        margin-bottom: 43px;
+        margin-top: 40px;
+        margin-bottom: 35px;
         img{
           width: 431px;
         }
@@ -195,7 +195,7 @@
     }
     @media (max-width: 490px) {
       &__image {
-        margin-top: 30px;
+        margin-top: 15px;
         img{
           width: 361px;
         }

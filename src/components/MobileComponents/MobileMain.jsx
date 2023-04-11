@@ -12,7 +12,7 @@ export default function MobileMain() {
     <>
       <div className="main" id="main">
         <div className="blur"></div>
-        <video src={VideoFile} autoPlay loop muted className="videoBG" />
+        <video webkit-playsinline="true" playsinline="true" src={VideoFile} autoPlay loop muted className="videoBG" />
 
         <div className=" mainWrapper">
           <div className=" content ">

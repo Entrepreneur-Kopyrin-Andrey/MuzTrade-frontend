@@ -20,7 +20,7 @@ export default function ModalVideo() {
          {/*<Video ref={vol} playsinline autoPlay loop controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}>
           <source src={VideoFile} type="video/webm" />
         </Video> */}
-        <video ref={vol} src={VideoFile} autoPlay loop controls />
+        <video ref={vol} src={VideoFile} autoPlay loop controls webkit-playsinline="true" playsinline="true"/>
       </div>
     </div>
   );
