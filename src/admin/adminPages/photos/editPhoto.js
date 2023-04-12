@@ -5,10 +5,8 @@ import axios from "../../../axios";
 import basket from "../../../assets/basket.svg";
 
 export default function EditPhoto() {
-
   const navigate = useNavigate();
   const { id } = useParams();
-  const [loading, setLoading] = React.useState(false);
   const [summary, setSummary] = React.useState("");
   const [date, setDate] = React.useState("");
   const [imageUrl, setImageUrl] = React.useState("");
@@ -34,12 +32,13 @@ export default function EditPhoto() {
 
   const onSubmit = async () => {
     try {
-      setLoading(true);
       const fields = {
         summary,
         date,
         imageUrl,
       };
+      const { data } = await axios.patch(`/photos/${id}`, fields);
+      const _id = id;
       alert("Изменения сохранены");
       navigate(`/photos/${id}`);
     } catch (error) {
@@ -58,13 +57,9 @@ export default function EditPhoto() {
       })
       .catch((err) => {
         console.warn(err);
-        alert("Ошибка при получении новости!");
+        alert("Ошибка при получении картинки!");
       });
   }, []);
-
-  // if (!isAuth) {
-  //   return <Navigate to="/admin" />;
-  // }
 
   return (
     <>
@@ -76,7 +71,7 @@ export default function EditPhoto() {
               <>
                 <div className="fileUpl">
                   <img
-                    src={'https://api.muztrade.com:4444' + imageUrl}
+                    src={"https://api.muztrade.com:4444" + imageUrl}
                     alt="Upload"
                     className="uploadImg"
                   />
